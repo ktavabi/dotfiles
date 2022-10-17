@@ -10,7 +10,7 @@
 # ------------------------------------------------------------------------------
 
 # Export path to root of dotfiles repo
-export DOTFILES=${DOTFILES:="$HOME/.dotfiles"}
+export DOTFILES=${DOTFILES:="$HOME/Documents/Projects/Repos/dotfiles"}
 
 # Locale
 export LC_ALL=en_US.UTF-8
@@ -28,6 +28,14 @@ _extend_path() {
     export PATH="$1:$PATH"
   fi
 }
+
+# $PATH customizations
+_extend_path "/opt/homebrew/bin"
+_extend_path "/opt/homebrew/sbin"
+
+# Python via pyenv
+eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init -)"
+# TODO: eval "$(_PIPENV_COMPLETE=zsh_source pipenv)" # pipenv zsh tab autocomp
 
 # Add custom bin to $PATH
 _extend_path "$HOME/.local/bin"
@@ -101,7 +109,6 @@ plugins=(
   gpg-agent
   macos
   gh
-  vscode
   common-aliases
   command-not-found
   docker

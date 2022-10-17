@@ -13,6 +13,6 @@ if _exists "brew"; then
   brew install sheldon
 fi
 
-INSTALLER=https://rossmacarthur.github.io/install/crate.sh
-BIN="$HOME/.local/bin"
-curl --proto '=https' -fLsS "$INSTALLER" | bash -s -- --repo rossmacarthur/sheldon --to "$BIN"
+# INSTALLER=https://rossmacarthur.github.io/install/crate.sh
+# BIN="$HOME/.local/bin"
+# curl --proto '=https' -fLsS "$INSTALLER" | bash -s -- --repo rossmacarthur/sheldon --to "$BIN"
