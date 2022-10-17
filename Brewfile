@@ -33,6 +33,9 @@ brew "gettext"
 brew "texlive"
 brew "perl"
 brew "pandoc-ref"
+brew "pandoc"
+brew "librsvg"
+brew "entr"
 
 # ------------------------------------------------------------------------------
 # Taps
