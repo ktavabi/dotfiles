@@ -1,10 +1,6 @@
-# Denys Dovhan’s dotfiles
+# Kambiz’s dotfiles
 
-<p align="center">
-  <img alt="Spaceship with Hyper and One Dark" src="https://user-images.githubusercontent.com/10276208/36086434-5de52ace-0ff2-11e8-8299-c67f9ab4e9bd.gif" width="980px">
-</p>
-
-There are tons of useful things in here:
+All credit goes to [Denys Dovhan](https://github.com/denysdovhan/dotfiles) who created the Zsh spaceship prompt and wrapped up the following features into a dotfiles repo:
 
 - The usefulness of [Oh My ZSH!](http://ohmyz.sh/) is already built–in.
 - [Spaceship](https://github.com/spaceship-prompt/spaceship-prompt) as a prompt.
@@ -20,7 +16,7 @@ There are tons of useful things in here:
 - A lot of useful [bins](https://github.com/denysdovhan/dotfiles/tree/master/bin).
 - `update` script for updating dotfiles, Zsh plugins, brew, and apt packages.
 
-Missing feature? Fork this repo and make it better.
+Missing feature? 🍴 Fork [Deny's repo](https://github.com/denysdovhan/dotfiles) and make it better!
 
 ## Installation
 
@@ -60,7 +56,7 @@ This command refreshes `sudo`, pulls the latest dotfiles, reruns `./install --ex
 
 ## Under the hood
 
-> **Note:** You may put your custom settings into `~/.zshlocal`.
+> **Note:** You may put your custom settings into `$DOTFILES/custom`.
 
 ### Projects tree
 
@@ -217,11 +213,11 @@ Dotfiles also include some functions that will make your life easier. See code i
 
 ## Resources
 
-Resources that I used to make these dotfiles better:
+Resources to make dotfiles:
 
 - [GitHub ❤ ~/](http://dotfiles.github.com/)
 - [Mathias’s dotfiles](https://github.com/mathiasbynens/dotfiles)
 
 ## License
 
-MIT © [Denys Dovhan](https://denysdovhan.com)
+MIT © Kambiz Tavabi
