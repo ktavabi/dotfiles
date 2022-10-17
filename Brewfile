@@ -100,3 +100,7 @@ mas "Unsplash Wallpapers", id: 12848638472
 mas "NordVPN", id: 905953485
 mas "The Unarchiver",  id: 425424353
 mas "Pandan", id: 1569600264
+brew "pandoc-ref"
+brew "pandoc"
+brew "librsvg"
+brew "entr"
