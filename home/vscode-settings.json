@@ -12,7 +12,51 @@
         "$home/Documents/Projects"
     ],
     "latex-workshop.latex.outDir": "%DIR%/build",
-    "todo-tree.regex.regex": "(\\\\|%)\\s*($TAGS)",
+    "todo-tree.general.tags": ["NOTE", "TODO", "FIXME", "MARK", "[ ]", "[x]", "HOT"],
+    "todo-tree.highlights.defaultHighlight": {
+      "type": "tag",
+      "fontWeight": "bold",
+      "foreground": "#000000",
+      "opacity": 90
+    },
+    "todo-tree.highlights.customHighlight": {
+      "NOTE": {
+        "background": "#FFA500",
+        "iconColour": "#FFA500",
+        "icon": "file"
+      },
+      "TODO": {
+        "background": "#FFD703",
+        "iconColour": "#FFD703",
+        "icon": "clippy"
+      },
+      "FIXME": {
+        "background": "#FF01FF",
+        "iconColour": "#FF01FF",
+        "icon": "bug"
+      },
+      "MARK": {
+        "background": "#157EFB",
+        "iconColour": "#157EFB",
+        "icon": "tag"
+      },
+      "[ ]": {
+        "background": "#ff000080",
+        "iconColour": "#ff000080",
+        "icon": "square"
+      },
+      "[x]": {
+        "background": "#00ff0080",
+        "iconColour": "#00ff0080",
+        "icon": "square-fill"
+      },
+      "HOT": {
+        "background": "#f80b2180",
+        "iconColour": "#f80b2180",
+        "icon": "flame"
+      }
+    },
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
     "editor.inlineSuggest.enabled": true,
     "editor.bracketPairColorization.enabled": true,
     "editor.fontSize": 14,
@@ -28,4 +72,13 @@
     "todo-tree.regex.enableMultiLine": true,
     "git.autofetch": true,
     "git.confirmSync": false,
+    "markdown-preview-enhanced.usePandocParser": true,
+    "markdown-preview-enhanced.liveUpdate": true,
+    "markdown-preview-enhanced.automaticallyShowPreviewOfMarkdownBeingEdited": true,
+    "window.zoomLevel": -1,
+    "workbench.productIconTheme": "icons-octicons",
+    "markdown-preview-enhanced.mathRenderingOption": "MathJax",
+    "markdown-preview-enhanced.pandocArguments": [
+      "--standalone", "-F", "pandoc-crossref", "--citeproc"
+    ],
 }
