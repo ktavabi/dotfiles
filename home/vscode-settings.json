@@ -75,10 +75,14 @@
     "markdown-preview-enhanced.usePandocParser": true,
     "markdown-preview-enhanced.liveUpdate": true,
     "markdown-preview-enhanced.automaticallyShowPreviewOfMarkdownBeingEdited": true,
-    "window.zoomLevel": -1,
     "workbench.productIconTheme": "icons-octicons",
     "markdown-preview-enhanced.mathRenderingOption": "MathJax",
     "markdown-preview-enhanced.pandocArguments": [
-      "--standalone", "-F", "pandoc-crossref", "--citeproc"
+     "--standalone", "-F", "pandoc-crossref", "--citeproc"
     ],
+    "[markdown]": {
+      "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    },
+    "window.zoomLevel": 1,
+    "latex-workshop.intellisense.file.base": "both",
 }
