@@ -71,10 +71,13 @@ fi
 
 alias git-root='cd $(git rev-parse --show-toplevel)'
 
+# XXX
 if _exists lsd; then
-  unalias ls
   alias ls='lsd'
-  alias lt='lsd --tree'
+  alias l='ls -l'
+  alias la='ls -a'
+  alias lla='ls -la'
+  alias lt='ls --tree'
 fi
 
 # cat with syntax highlighting
