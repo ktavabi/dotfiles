@@ -8,8 +8,6 @@
 # ------------------------------------------------------------------------------
 # Environment
 # ------------------------------------------------------------------------------
-autoload -Uz compinit
-compinit
 
 # Export path to root of dotfiles repo
 export DOTFILES=${DOTFILES:="$HOME/Documents/Projects/Repos/dotfiles"}

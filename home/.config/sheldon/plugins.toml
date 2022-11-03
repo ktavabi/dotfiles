@@ -14,8 +14,16 @@ shell = "zsh"
 
 [plugins]
 
+[plugins.oh-my-zsh]
+github = "ohmyzsh/ohmyzsh"
+
+[plugins.spaceship-loader]
+local = "~/.dotfiles/prompt"
+use = ["spaceship.zsh"]
+
 [plugins.spaceship]
-github = 'spaceship-prompt/spaceship-prompt'
+github = "spaceship-prompt/spaceship-prompt"
+apply = ["spaceship"]
 
 [plugins.zsh-defer]
 github = "romkatv/zsh-defer"
@@ -25,22 +33,38 @@ github = 'chriskempson/base16-shell'
 
 [plugins.alias-tips]
 github = 'djui/alias-tips'
+apply = ["defer"]
 
 [plugins.zsh-syntax-highlighting]
 github = "zsh-users/zsh-syntax-highlighting"
+apply = ["defer"]
 
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
 use = ["{{ name }}.zsh"]
+apply = ["defer"]
 
 [plugins.zsh-autopair]
 github = "hlissner/zsh-autopair"
+apply = ["defer"]
 
 [plugins.zsh-better-npm-completion]
 github = "lukechilds/zsh-better-npm-completion"
+apply = ["defer"]
 
 [plugins.auto-notify]
 github = "marzocchi/zsh-notify"
+apply = ["defer"]
 
 [plugins.lib]
 local = "~/.dotfiles/lib"
+
+[templates]
+defer = '''
+  {% for file in files %}
+    zsh-defer source "{{ file }}"
+  {% endfor %}
+'''
+spaceship = '''
+  spaceship-loader "{{ dir }}"
+'''
