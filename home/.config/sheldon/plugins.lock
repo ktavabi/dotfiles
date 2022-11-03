@@ -1,0 +1,103 @@
+version = "0.6.6"
+home = "/Users/kam"
+config_dir = "/Users/kam/.sheldon"
+data_dir = "/Users/kam/.sheldon"
+config_file = "/Users/kam/.sheldon/plugins.toml"
+lock_file = "/Users/kam/.sheldon/plugins.lock"
+clone_dir = "/Users/kam/.sheldon/repos"
+download_dir = "/Users/kam/.sheldon/downloads"
+
+[[plugins]]
+name = "oh-my-zsh"
+source_dir = "/Users/kam/.sheldon/repos/github.com/ohmyzsh/ohmyzsh"
+files = ["/Users/kam/.sheldon/repos/github.com/ohmyzsh/ohmyzsh/oh-my-zsh.sh"]
+apply = ["source"]
+
+[[plugins]]
+name = "spaceship-loader"
+source_dir = "/Users/kam/.dotfiles/prompt"
+files = ["/Users/kam/.dotfiles/prompt/spaceship.zsh"]
+apply = ["source"]
+
+[[plugins]]
+name = "spaceship"
+source_dir = "/Users/kam/.sheldon/repos/github.com/spaceship-prompt/spaceship-prompt"
+files = ["/Users/kam/.sheldon/repos/github.com/spaceship-prompt/spaceship-prompt/spaceship.zsh"]
+apply = ["spaceship"]
+
+[[plugins]]
+name = "zsh-defer"
+source_dir = "/Users/kam/.sheldon/repos/github.com/romkatv/zsh-defer"
+files = ["/Users/kam/.sheldon/repos/github.com/romkatv/zsh-defer/zsh-defer.plugin.zsh"]
+apply = ["source"]
+
+[[plugins]]
+name = "base16"
+source_dir = "/Users/kam/.sheldon/repos/github.com/chriskempson/base16-shell"
+files = ["/Users/kam/.sheldon/repos/github.com/chriskempson/base16-shell/base16-shell.plugin.zsh"]
+apply = ["source"]
+
+[[plugins]]
+name = "alias-tips"
+source_dir = "/Users/kam/.sheldon/repos/github.com/djui/alias-tips"
+files = ["/Users/kam/.sheldon/repos/github.com/djui/alias-tips/alias-tips.plugin.zsh"]
+apply = ["defer"]
+
+[[plugins]]
+name = "zsh-syntax-highlighting"
+source_dir = "/Users/kam/.sheldon/repos/github.com/zsh-users/zsh-syntax-highlighting"
+files = ["/Users/kam/.sheldon/repos/github.com/zsh-users/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh"]
+apply = ["defer"]
+
+[[plugins]]
+name = "zsh-autosuggestions"
+source_dir = "/Users/kam/.sheldon/repos/github.com/zsh-users/zsh-autosuggestions"
+files = ["/Users/kam/.sheldon/repos/github.com/zsh-users/zsh-autosuggestions/zsh-autosuggestions.zsh"]
+apply = ["defer"]
+
+[[plugins]]
+name = "zsh-autopair"
+source_dir = "/Users/kam/.sheldon/repos/github.com/hlissner/zsh-autopair"
+files = ["/Users/kam/.sheldon/repos/github.com/hlissner/zsh-autopair/zsh-autopair.plugin.zsh"]
+apply = ["defer"]
+
+[[plugins]]
+name = "zsh-better-npm-completion"
+source_dir = "/Users/kam/.sheldon/repos/github.com/lukechilds/zsh-better-npm-completion"
+files = ["/Users/kam/.sheldon/repos/github.com/lukechilds/zsh-better-npm-completion/zsh-better-npm-completion.plugin.zsh"]
+apply = ["defer"]
+
+[[plugins]]
+name = "auto-notify"
+source_dir = "/Users/kam/.sheldon/repos/github.com/marzocchi/zsh-notify"
+files = ["/Users/kam/.sheldon/repos/github.com/marzocchi/zsh-notify/notify.plugin.zsh"]
+apply = ["defer"]
+
+[[plugins]]
+name = "lib"
+source_dir = "/Users/kam/.dotfiles/lib"
+files = ["/Users/kam/.dotfiles/lib/aliases.zsh", "/Users/kam/.dotfiles/lib/lscolors.zsh", "/Users/kam/.dotfiles/lib/smartdots.zsh"]
+apply = ["source"]
+[templates.PATH]
+value = "export PATH=\"{{ dir }}:$PATH\""
+each = false
+
+[templates.path]
+value = "path=( \"{{ dir }}\" $path )"
+each = false
+
+[templates.fpath]
+value = "fpath=( \"{{ dir }}\" $fpath )"
+each = false
+
+[templates.source]
+value = "source \"{{ file }}\""
+each = true
+
+[templates.defer]
+value = "zsh-defer source \"{{ file }}\""
+each = true
+
+[templates.spaceship]
+value = "spaceship-loader \"{{ dir }}\""
+each = false
