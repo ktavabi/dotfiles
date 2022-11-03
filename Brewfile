@@ -49,6 +49,7 @@ tap "homebrew/cask-fonts"
 # Fonts
 cask "font-fira-code"
 cask "font-fira-code-nerd-font"
+cask "font-hack-nerd-font"
 
 # Utils
 cask "gpg-suite"
