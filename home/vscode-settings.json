@@ -1,88 +1,98 @@
 {
-    "explorer.confirmDelete": false,
-    "latex-workshop.latex.autoClean.run": "onFailed",
     "[latex]": {
         "editor.defaultFormatter": "James-Yu.latex-workshop"
     },
-    "redhat.telemetry.enabled": true,
-    "workbench.iconTheme": "material-icon-theme",
-    "sync.gist": "eb606836087b34a186e9627869abcd6a",
-    "workbench.colorTheme": "Tomorrow Night Blue",
-    "projectManager.git.baseFolders": [
-        "$home/Documents/Projects"
-    ],
-    "latex-workshop.latex.outDir": "%DIR%/build",
-    "todo-tree.general.tags": ["NOTE", "TODO", "FIXME", "MARK", "[ ]", "[x]", "HOT"],
-    "todo-tree.highlights.defaultHighlight": {
-      "type": "tag",
-      "fontWeight": "bold",
-      "foreground": "#000000",
-      "opacity": 90
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
     },
-    "todo-tree.highlights.customHighlight": {
-      "NOTE": {
-        "background": "#FFA500",
-        "iconColour": "#FFA500",
-        "icon": "file"
-      },
-      "TODO": {
-        "background": "#FFD703",
-        "iconColour": "#FFD703",
-        "icon": "clippy"
-      },
-      "FIXME": {
-        "background": "#FF01FF",
-        "iconColour": "#FF01FF",
-        "icon": "bug"
-      },
-      "MARK": {
-        "background": "#157EFB",
-        "iconColour": "#157EFB",
-        "icon": "tag"
-      },
-      "[ ]": {
-        "background": "#ff000080",
-        "iconColour": "#ff000080",
-        "icon": "square"
-      },
-      "[x]": {
-        "background": "#00ff0080",
-        "iconColour": "#00ff0080",
-        "icon": "square-fill"
-      },
-      "HOT": {
-        "background": "#f80b2180",
-        "iconColour": "#f80b2180",
-        "icon": "flame"
-      }
-    },
-    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
-    "editor.inlineSuggest.enabled": true,
     "editor.bracketPairColorization.enabled": true,
+    "editor.fontFamily": "hack-nerd-font",
     "editor.fontSize": 14,
-    "editor.fontFamily": "fira-code-nerd-font",
+    "editor.inlineSuggest.enabled": true,
+    "explorer.confirmDelete": false,
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "jupyter.askForKernelRestart": false,
     "jupyter.widgetScriptSources": [
         "jsdelivr.com",
         "unpkg.com"
     ],
-    "terminal.external.osxExec": "iterm.app",
-    "terminal.integrated.defaultProfile.osx": "zsh (2)",
-    "terminal.integrated.fontFamily": "monospace",
-    "todo-tree.general.enableFileWatcher": true,
-    "todo-tree.regex.enableMultiLine": true,
-    "git.autofetch": true,
-    "git.confirmSync": false,
-    "markdown-preview-enhanced.usePandocParser": true,
-    "markdown-preview-enhanced.liveUpdate": true,
+    "latex-workshop.intellisense.file.base": "both",
+    "latex-workshop.latex.autoClean.run": "onFailed",
+    "latex-workshop.latex.outDir": "%DIR%/build",
     "markdown-preview-enhanced.automaticallyShowPreviewOfMarkdownBeingEdited": true,
-    "workbench.productIconTheme": "icons-octicons",
+    "markdown-preview-enhanced.liveUpdate": true,
     "markdown-preview-enhanced.mathRenderingOption": "MathJax",
     "markdown-preview-enhanced.pandocArguments": [
-     "--standalone", "-F", "pandoc-crossref", "--citeproc"
+        "--standalone",
+        "-F",
+        "pandoc-crossref",
+        "--citeproc"
     ],
-    "[markdown]": {
-      "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    "markdown-preview-enhanced.usePandocParser": true,
+    "projectManager.git.baseFolders": [
+        "$home/Documents/Projects"
+    ],
+    "redhat.telemetry.enabled": true,
+    "sync.gist": "eb606836087b34a186e9627869abcd6a",
+    "terminal.external.osxExec": "iterm.app",
+    "terminal.integrated.fontFamily": "monospace",
+    "todo-tree.general.enableFileWatcher": true,
+    "todo-tree.general.tags": [
+        "NOTE",
+        "TODO",
+        "FIXME",
+        "MARK",
+        "[ ]",
+        "[x]",
+        "HOT"
+    ],
+    "todo-tree.highlights.customHighlight": {
+        "[ ]": {
+            "background": "#ff000080",
+            "icon": "square",
+            "iconColour": "#ff000080"
+        },
+        "[x]": {
+            "background": "#00ff0080",
+            "icon": "square-fill",
+            "iconColour": "#00ff0080"
+        },
+        "FIXME": {
+            "background": "#FF01FF",
+            "icon": "bug",
+            "iconColour": "#FF01FF"
+        },
+        "HOT": {
+            "background": "#f80b2180",
+            "icon": "flame",
+            "iconColour": "#f80b2180"
+        },
+        "MARK": {
+            "background": "#157EFB",
+            "icon": "tag",
+            "iconColour": "#157EFB"
+        },
+        "NOTE": {
+            "background": "#FFA500",
+            "icon": "file",
+            "iconColour": "#FFA500"
+        },
+        "TODO": {
+            "background": "#FFD703",
+            "icon": "clippy",
+            "iconColour": "#FFD703"
+        }
     },
-    "window.zoomLevel": 1,
-    "latex-workshop.intellisense.file.base": "both",
+    "todo-tree.highlights.defaultHighlight": {
+        "fontWeight": "bold",
+        "foreground": "#000000",
+        "opacity": 90,
+        "type": "tag"
+    },
+    "todo-tree.regex.enableMultiLine": true,
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+    "workbench.colorTheme": "Tomorrow Night Blue",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.productIconTheme": "icons-octicons"
 }
