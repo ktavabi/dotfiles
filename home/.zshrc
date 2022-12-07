@@ -29,15 +29,8 @@ _extend_path() {
   fi
 }
 
-# $PATH customizations
-_extend_path "/opt/homebrew/bin"
-_extend_path "/opt/homebrew/sbin"
-
-# Python via pyenv
-eval "$(pyenv init -)" && eval "$(pyenv virtualenv-init -)"
-# TODO: eval "$(_PIPENV_COMPLETE=zsh_source pipenv)" # pipenv zsh tab autocomp
-
 # Add custom bin to $PATH
+_extend_path "$HOME/.pyenv/bin"
 _extend_path "$HOME/.local/bin"
 _extend_path "$DOTFILES/bin"
 _extend_path "$HOME/.npm-global/bin"
@@ -127,6 +120,16 @@ eval "$(sheldon source)"
 if command -v direnv >/dev/null 2>&1; then
   eval "$(direnv hook zsh)"
 fi
+
+# Set PATH, MANPATH, etc., for Homebrew.
+eval "$(/opt/homebrew/bin/brew shellenv)"
+_extend_path "/opt/homebrew/bin"
+_extend_path "/opt/homebrew/sbin"
+
+# Python via pyenv
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+# TODO: eval "$(_PIPENV_COMPLETE=zsh_source pipenv)" # pipenv zsh tab autocomp
 
 # ------------------------------------------------------------------------------
 # Overrides

@@ -32,10 +32,13 @@ brew "libtool"
 brew "gettext"
 brew "texlive"
 brew "perl"
-brew "pandoc-ref"
+brew "pandoc-crossref"
 brew "pandoc"
 brew "librsvg"
 brew "entr"
+brew "pyenv"
+brew "pyenv-virtualenv"
+
 
 # ------------------------------------------------------------------------------
 # Taps
@@ -59,7 +62,6 @@ cask "openvpn-connect"
 cask "transmission"
 cask "handbrake"
 cask "vlc"
-cask "obs"
 
 # Development
 cask "atom"
@@ -71,17 +73,14 @@ cask "vscodium"
 
 # Desktop applications
 cask "telegram"
-cask "google-chrome"
 cask "firefox"
 cask "dropbox"
 cask "slack"
 cask "steam"
 cask "spotify"
-cask "notion"
 cask "discord"
 cask "tradingview"
 cask "latexit"
-cask "zettlr"
 cask "mactex"
 
 # Quick Look plugins
@@ -108,4 +107,5 @@ mas "SnippetsLab", id: 1006087419
 mas "Paprika Recipe Manager 3", id: 1303222628
 mas "Python Recipes", id: 1180825853
 mas "Pomo Done – Your Time Hacker", id: 1096128050
-mas "Be Focused - Focus Timer", id: 973134470
+mas "Alfred", id: 405843582
+mas "Transmit 5", id: 1436522307
