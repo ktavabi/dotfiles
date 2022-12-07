@@ -30,7 +30,6 @@ _extend_path() {
 }
 
 # Add custom bin to $PATH
-_extend_path "$HOME/.pyenv/bin"
 _extend_path "$HOME/.local/bin"
 _extend_path "$DOTFILES/bin"
 _extend_path "$HOME/.npm-global/bin"
@@ -38,6 +37,7 @@ _extend_path "$HOME/.rvm/bin"
 _extend_path "$HOME/.yarn/bin"
 _extend_path "$HOME/.config/yarn/global/node_modules/.bin"
 _extend_path "$HOME/.bun/bin"
+_extend_path "$HOME/.pyenv/bin"
 
 # Extend $NODE_PATH
 if [ -d ~/.npm-global ]; then
@@ -88,7 +88,7 @@ export TIMEFMT=$'\n================\nCPU\t%P\nuser\t%*U\nsystem\t%*S\ntotal\t%*E
 ZSH_DISABLE_COMPFIX=true
 
 # OMZ is managed by Sheldon
-export ZSH="$HOME/.config/sheldon/repos/github.com/ohmyzsh/ohmyzsh"
+export ZSH="$HOME/.local/share/sheldon/repos/github.com/ohmyzsh/ohmyzsh"
 
 plugins=(
   history-substring-search
@@ -108,11 +108,16 @@ plugins=(
 )
 
 # Autoload node version when changing cwd
-NVM_AUTOLOAD=1
+zstyle ':omz:plugins:nvm' autoload true
 
 # ------------------------------------------------------------------------------
 # Dependencies
 # ------------------------------------------------------------------------------
+
+# Homebrew.
+eval "$(/opt/homebrew/bin/brew shellenv)"
+_extend_path "/opt/homebrew/bin"
+_extend_path "/opt/homebrew/sbin"
 
 # Shell plugins
 eval "$(sheldon source)"
@@ -121,15 +126,15 @@ if command -v direnv >/dev/null 2>&1; then
   eval "$(direnv hook zsh)"
 fi
 
-# Set PATH, MANPATH, etc., for Homebrew.
-eval "$(/opt/homebrew/bin/brew shellenv)"
-_extend_path "/opt/homebrew/bin"
-_extend_path "/opt/homebrew/sbin"
-
 # Python via pyenv
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 # TODO: eval "$(_PIPENV_COMPLETE=zsh_source pipenv)" # pipenv zsh tab autocomp
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # ------------------------------------------------------------------------------
 # Overrides
