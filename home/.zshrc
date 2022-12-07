@@ -26,6 +26,7 @@ _extend_path() {
 }
 
 # Add custom bin to $PATH
+_extend_path "$HOME/.pyenv/bin" # pyenv
 _extend_path "$HOME/.local/bin" # local bins
 _extend_path "$DOTFILES/bin" # custom scripts
 _extend_path "$HOME/.npm-global/bin" # npm global packages

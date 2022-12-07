@@ -146,3 +146,6 @@
 #   email = denysdovhan@gmail.com
 [include]
   path = ~/.gitlocal
+[user]
+	name = Kambiz Tavabi
+	email = ktavabi@gmail.com
