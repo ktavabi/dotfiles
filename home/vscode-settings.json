@@ -18,8 +18,7 @@
         "unpkg.com"
     ],
     "latex-workshop.intellisense.file.base": "both",
-    "latex-workshop.latex.autoClean.run": "onFailed",
-    "latex-workshop.latex.outDir": "%DIR%/build",
+    "latex-workshop.latex.outDir": "%DIR%/build/",
     "markdown-preview-enhanced.automaticallyShowPreviewOfMarkdownBeingEdited": true,
     "markdown-preview-enhanced.liveUpdate": true,
     "markdown-preview-enhanced.mathRenderingOption": "MathJax",
@@ -94,5 +93,4 @@
     "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
     "workbench.colorTheme": "Material Theme Ocean High Contrast",
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.productIconTheme": "icons-octicons"
   }
