@@ -29,7 +29,7 @@
     ],
     "markdown-preview-enhanced.usePandocParser": true,
     "projectManager.git.baseFolders": [
-        "$home/Documents/Projects"
+        "$home/Documents/Projects/"
     ],
     "redhat.telemetry.enabled": true,
     "sync.gist": "eb606836087b34a186e9627869abcd6a",
@@ -91,5 +91,5 @@
     "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
     "workbench.colorTheme": "Material Theme Ocean High Contrast",
     "workbench.iconTheme": "material-icon-theme",
-    "terminal.integrated.fontFamily": "HackNerdFontComplete-Regular",
+    "terminal.integrated.fontFamily": "HackNerdFontComplete-Regular"
   }
