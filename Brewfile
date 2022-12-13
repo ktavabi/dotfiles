@@ -7,30 +7,27 @@
 brew "git"
 brew "zsh"
 brew "zsh-completions"
-brew "node"
+# brew "node"
 brew "sheldon"
 brew "coreutils"
 brew "tree"
 brew "lsd"
 brew "wget"
-brew "yarn"
+#brew "yarn"
 brew "tldr"
 brew "mas"
 brew "gh"
 brew "terminal-notifier"
-brew "youtube-dl"
-brew "openssl@3"
-brew "pyenv"
-brew "autoconf"
-brew "automake"
-brew "libtool"
-brew "gettext"
+#brew "youtube-dl"
+#brew "openssl@3"
+#brew "autoconf"
+#brew "automake"
+#brew "libtool"
 brew "texlive"
-brew "perl"
+#brew "perl"
 brew "pandoc-crossref"
 brew "pandoc"
-brew "librsvg"
-brew "entr"
+#brew "librsvg"
 brew "pyenv"
 brew "pyenv-virtualenv"
 
@@ -51,17 +48,15 @@ cask "font-hack-nerd-font"
 
 # Utils
 cask "gpg-suite"
-cask "openvpn-connect"
+#cask "openvpn-connect"
 
 # Media
-cask "transmission"
+# cask "transmission"
 cask "handbrake"
 cask "vlc"
 
 # Development
-cask "atom"
 cask "iterm2"
-cask "visual-studio-code"
 cask "github"
 cask "fig"
 cask "vscodium"
@@ -92,7 +87,6 @@ mas "Spark", id: 1176895641
 mas "Unsplash Wallpapers", id: 1284863847
 mas "NordVPN", id: 905953485
 mas "The Unarchiver",  id: 425424353
-mas "1Password 7", id: 1333542190
 mas "Magnet", id: 441258766
 mas "Moleskine Overlap", id: 1516950324
 mas "Journey", id: 1489704689
@@ -102,6 +96,5 @@ mas "SnippetsLab", id: 1006087419
 mas "Paprika Recipe Manager 3", id: 1303222628
 mas "Python Recipes", id: 1180825853
 mas "Pomo Done – Your Time Hacker", id: 1096128050
-mas "Alfred", id: 405843582
 mas "Transmit 5", id: 1436522307
 mas "PDF Expert – Edit, Sign PDFs", id: 1055273043
