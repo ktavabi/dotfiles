@@ -29,10 +29,9 @@
     ],
     "markdown-preview-enhanced.usePandocParser": true,
     "projectManager.git.baseFolders": [
-        "$home/Documents/Projects/"
+        "$home/Projects/Repos/"
     ],
     "redhat.telemetry.enabled": true,
-    "sync.gist": "eb606836087b34a186e9627869abcd6a",
     "terminal.external.osxExec": "iterm.app",
     "todo-tree.general.enableFileWatcher": true,
     "todo-tree.general.tags": [
@@ -91,5 +90,8 @@
     "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
     "workbench.colorTheme": "Material Theme Ocean High Contrast",
     "workbench.iconTheme": "material-icon-theme",
-    "terminal.integrated.fontFamily": "HackNerdFontComplete-Regular"
+    "terminal.integrated.fontFamily": "HackNerdFontComplete-Regular",
+    "sync.gist": "34738ac634de36c7dce4e658b7b2ce54",
+    "workbench.editor.enablePreview": false,
+    "workbench.startupEditor": "none"
   }
