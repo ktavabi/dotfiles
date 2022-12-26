@@ -99,3 +99,7 @@ mas "Pomo Done – Your Time Hacker", id: 1096128050
 mas "Transmit 5", id: 1436522307
 mas "PDF Expert – Edit, Sign PDFs", id: 1055273043
 mas "Owly - Prevent Display Sleep", id: 882812218
+mas "Keynote", id: 409183694
+mas "Pages", id: 409201541
+mas "Numbers" id: 409203825
+mas "MindNode – Mind Map & Outline" id: 1289197285
