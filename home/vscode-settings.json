@@ -29,7 +29,7 @@
     ],
     "markdown-preview-enhanced.usePandocParser": true,
     "redhat.telemetry.enabled": true,
-    "terminal.external.osxExec": "iterm.app",
+    "terminal.external.osxExec": "",
     "todo-tree.general.enableFileWatcher": true,
     "todo-tree.general.tags": [
         "NOTE",
@@ -94,5 +94,7 @@
     "projectManager.git.baseFolders": [
         "$home/Projects/Repos/"
     ],
-    "editor.accessibilitySupport": "off"
+    "editor.accessibilitySupport": "off",
+    "debug.terminal.clearBeforeReusing": true,
+    "terminal.integrated.inheritEnv": false
   }
