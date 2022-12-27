@@ -37,7 +37,6 @@ _extend_path "$HOME/.rvm/bin"
 _extend_path "$HOME/.yarn/bin"
 _extend_path "$HOME/.config/yarn/global/node_modules/.bin"
 _extend_path "$HOME/.bun/bin"
-_extend_path "$HOME/.pyenv/bin"
 
 # Extend $NODE_PATH
 if [ -d ~/.npm-global ]; then
@@ -116,8 +115,6 @@ zstyle ':omz:plugins:nvm' autoload true
 
 # Homebrew.
 eval "$(/opt/homebrew/bin/brew shellenv)"
-_extend_path "/opt/homebrew/bin"
-_extend_path "/opt/homebrew/sbin"
 
 # Shell plugins
 eval "$(sheldon source)"
@@ -127,6 +124,8 @@ if command -v direnv >/dev/null 2>&1; then
 fi
 
 # Python via pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 # TODO: eval "$(_PIPENV_COMPLETE=zsh_source pipenv)" # pipenv zsh tab autocomp
