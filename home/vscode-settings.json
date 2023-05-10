@@ -1,100 +1,105 @@
 {
-    "[latex]": {
-        "editor.defaultFormatter": "James-Yu.latex-workshop"
+  "[latex]": {
+    "editor.defaultFormatter": "James-Yu.latex-workshop"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
+  "editor.bracketPairColorization.enabled": true,
+  "editor.fontFamily": "hack-nerd-font",
+  "editor.fontSize": 14,
+  "editor.inlineSuggest.enabled": true,
+  "explorer.confirmDelete": false,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "jupyter.askForKernelRestart": false,
+  "jupyter.widgetScriptSources": ["jsdelivr.com", "unpkg.com"],
+  "latex-workshop.intellisense.file.base": "both",
+  "markdown-preview-enhanced.automaticallyShowPreviewOfMarkdownBeingEdited": true,
+  "markdown-preview-enhanced.liveUpdate": true,
+  "markdown-preview-enhanced.mathRenderingOption": "MathJax",
+  "markdown-preview-enhanced.pandocArguments": [
+    "--standalone",
+    "-F",
+    "pandoc-crossref",
+    "--citeproc"
+  ],
+  "markdown-preview-enhanced.usePandocParser": true,
+  "redhat.telemetry.enabled": true,
+  "terminal.external.osxExec": "",
+  "todo-tree.general.enableFileWatcher": true,
+  "todo-tree.general.tags": [
+    "NOTE",
+    "TODO",
+    "FIXME",
+    "MARK",
+    "[ ]",
+    "[x]",
+    "HOT"
+  ],
+  "todo-tree.highlights.customHighlight": {
+    "[ ]": {
+      "background": "#ff000080",
+      "icon": "square",
+      "iconColour": "#ff000080"
     },
-    "[markdown]": {
-        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    "[x]": {
+      "background": "#00ff0080",
+      "icon": "square-fill",
+      "iconColour": "#00ff0080"
     },
-    "editor.bracketPairColorization.enabled": true,
-    "editor.fontFamily": "hack-nerd-font",
-    "editor.fontSize": 14,
-    "editor.inlineSuggest.enabled": true,
-    "explorer.confirmDelete": false,
-    "git.autofetch": true,
-    "git.confirmSync": false,
-    "jupyter.askForKernelRestart": false,
-    "jupyter.widgetScriptSources": [
-        "jsdelivr.com",
-        "unpkg.com"
-    ],
-    "latex-workshop.intellisense.file.base": "both",
-    "markdown-preview-enhanced.automaticallyShowPreviewOfMarkdownBeingEdited": true,
-    "markdown-preview-enhanced.liveUpdate": true,
-    "markdown-preview-enhanced.mathRenderingOption": "MathJax",
-    "markdown-preview-enhanced.pandocArguments": [
-        "--standalone",
-        "-F",
-        "pandoc-crossref",
-        "--citeproc"
-    ],
-    "markdown-preview-enhanced.usePandocParser": true,
-    "redhat.telemetry.enabled": true,
-    "terminal.external.osxExec": "",
-    "todo-tree.general.enableFileWatcher": true,
-    "todo-tree.general.tags": [
-        "NOTE",
-        "TODO",
-        "FIXME",
-        "MARK",
-        "[ ]",
-        "[x]",
-        "HOT"
-    ],
-    "todo-tree.highlights.customHighlight": {
-        "[ ]": {
-            "background": "#ff000080",
-            "icon": "square",
-            "iconColour": "#ff000080"
-        },
-        "[x]": {
-            "background": "#00ff0080",
-            "icon": "square-fill",
-            "iconColour": "#00ff0080"
-        },
-        "FIXME": {
-            "background": "#FF01FF",
-            "icon": "bug",
-            "iconColour": "#FF01FF"
-        },
-        "HOT": {
-            "background": "#f80b2180",
-            "icon": "flame",
-            "iconColour": "#f80b2180"
-        },
-        "MARK": {
-            "background": "#157EFB",
-            "icon": "tag",
-            "iconColour": "#157EFB"
-        },
-        "NOTE": {
-            "background": "#FFA500",
-            "icon": "file",
-            "iconColour": "#FFA500"
-        },
-        "TODO": {
-            "background": "#FFD703",
-            "icon": "clippy",
-            "iconColour": "#FFD703"
-        }
+    "FIXME": {
+      "background": "#FF01FF",
+      "icon": "bug",
+      "iconColour": "#FF01FF"
     },
-    "todo-tree.highlights.defaultHighlight": {
-        "fontWeight": "bold",
-        "foreground": "#000000",
-        "opacity": 90,
-        "type": "tag"
+    "HOT": {
+      "background": "#f80b2180",
+      "icon": "flame",
+      "iconColour": "#f80b2180"
     },
-    "todo-tree.regex.enableMultiLine": true,
-    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
-    "workbench.colorTheme": "Material Theme Ocean High Contrast",
-    "workbench.iconTheme": "material-icon-theme",
-    "terminal.integrated.fontFamily": "HackNerdFontComplete-Regular",
-    "sync.gist": "34738ac634de36c7dce4e658b7b2ce54",
-    "workbench.editor.enablePreview": false,
-    "workbench.startupEditor": "none",
-    "projectManager.git.baseFolders": [
-        "$home/Projects/Repos/"
-    ],
-    "editor.accessibilitySupport": "off",
-    "debug.terminal.clearBeforeReusing": true,
-    "terminal.integrated.inheritEnv": false
-  }
+    "MARK": {
+      "background": "#157EFB",
+      "icon": "tag",
+      "iconColour": "#157EFB"
+    },
+    "NOTE": {
+      "background": "#FFA500",
+      "icon": "file",
+      "iconColour": "#FFA500"
+    },
+    "TODO": {
+      "background": "#FFD703",
+      "icon": "clippy",
+      "iconColour": "#FFD703"
+    }
+  },
+  "todo-tree.highlights.defaultHighlight": {
+    "fontWeight": "bold",
+    "foreground": "#000000",
+    "opacity": 90,
+    "type": "tag"
+  },
+  "todo-tree.regex.enableMultiLine": true,
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+  "terminal.integrated.fontFamily": "HackNerdFontComplete-Regular",
+  "sync.gist": "34738ac634de36c7dce4e658b7b2ce54",
+  "workbench.editor.enablePreview": false,
+  "workbench.startupEditor": "none",
+  "projectManager.git.baseFolders": ["$home/Projects/Repos/"],
+  "editor.accessibilitySupport": "off",
+  "debug.terminal.clearBeforeReusing": true,
+  "terminal.integrated.inheritEnv": false,
+  "latex-workshop.latex.autoBuild.run": "never",
+  "explorer.confirmDragAndDrop": false,
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "[python]": {
+    "editor.defaultFormatter": "black"
+  },
+  "python.formatting.provider": "black",
+  "editor.formatOnSave": true,
+  "window.zoomLevel": -1,
+  "workbench.iconTheme": "bearded-icons",
+  "workbench.tree.indent": 20,
+  "workbench.colorTheme": "Dracula"
+}
