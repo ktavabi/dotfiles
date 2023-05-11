@@ -36,6 +36,7 @@ brew "php"
 #brew "librsvg"
 brew "pyenv"
 brew "pyenv-virtualenv"
+brew "shellcheck"
 
 
 # ------------------------------------------------------------------------------
