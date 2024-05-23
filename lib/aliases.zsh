@@ -41,6 +41,7 @@ alias x+='chmod +x'
 alias open='open_command'
 alias o='open'
 alias oo='open .'
+alias term='open -a iterm.app'
 
 # Run scripts
 alias update="source $DOTFILES/scripts/update"
@@ -83,5 +84,8 @@ fi
 # cat with syntax highlighting
 # https://github.com/sharkdp/bat
 if _exists bat; then
+  # Run to list all themes:
+  #   bat --list-themes
+  export BAT_THEME='base16'
   alias cat='bat'
 fi
