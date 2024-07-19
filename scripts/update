@@ -62,7 +62,8 @@ update_dotfiles() {
   cd - > /dev/null 2>&1 || exit
 
   info "Updating Zsh plugins..."
-  sheldon lock --update
+  zgen selfupdate
+  zgen update
 
   finish
 }
@@ -81,30 +82,17 @@ update_brew() {
   finish
 }
 
-update_apt_get() {
-  if ! _exists apt-get; then
+update_apt() {
+  if ! _exists apt; then
     return
   fi
 
   info "Updating Ubuntu and installed packages..."
 
-  sudo apt-get update
-  sudo apt-get upgrade -y
-  sudo apt-get autoremove -y
-  sudo apt-get autoclean -y
-
-  finish
-}
-
-update_npm() {
-  if ! _exists npm; then
-    return
-  fi
-
-  info "Updating NPM..."
-
-  npm install npm -g
-  npm update -g
+  sudo apt update
+  sudo apt upgrade -y
+  sudo apt autoremove -y
+  sudo apt autoclean -y
 
   finish
 }
@@ -138,7 +126,6 @@ main() {
   update_dotfiles "$*"
   update_brew "$*"
   update_apt_get "$*"
-  update_npm "$*"
   on_finish "$*"
 }
 

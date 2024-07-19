@@ -7,7 +7,7 @@
 alias sudo='sudo '
 
 _exists() {
-  command -v $1 > /dev/null 2>&1
+  command -v $1 >/dev/null 2>&1
 }
 
 # Avoid stupidity with trash-cli:
@@ -24,13 +24,13 @@ alias clr='clear'
 alias q="~ && clear"
 
 # Folders Shortcuts
-[ -d ~/Downloads ]            && alias dl='cd ~/Downloads'
-[ -d ~/Desktop ]              && alias dt='cd ~/Desktop'
-[ -d ~/Projects ]             && alias pj='cd ~/Projects'
-[ -d ~/Projects/Forks ]       && alias pjf='cd ~/Projects/Forks'
-[ -d ~/Projects/Job ]         && alias pjj='cd ~/Projects/Job'
-[ -d ~/Projects/Playground ]  && alias pjl='cd ~/Projects/Playground'
-[ -d ~/Projects/Repos ]       && alias pjr='cd ~/Projects/Repos'
+[ -d ~/Downloads ] && alias dl='cd ~/Downloads'
+[ -d ~/Desktop ] && alias dt='cd ~/Desktop'
+[ -d ~/Projects ] && alias pj='cd ~/Projects'
+[ -d ~/Projects/Forks ] && alias pjf='cd ~/Projects/Forks'
+[ -d ~/Projects/Job ] && alias pjj='cd ~/Projects/Job'
+[ -d ~/Projects/Playground ] && alias pjl='cd ~/Projects/Playground'
+[ -d ~/Projects/Repos ] && alias pjr='cd ~/Projects/Repos'
 
 # Commands Shortcuts
 alias e="$EDITOR"
@@ -65,6 +65,11 @@ alias getpage='wget --no-clobber --page-requisites --html-extension --convert-li
 # Download file with original filename
 alias get="curl -O -L"
 
+# Yarn
+alias ybw="yarn build:watch"
+alias yba="yarn build:all"
+alias ytw="yarn test:watch"
+
 # Use tldr as help util
 if _exists tldr; then
   alias help="tldr"
@@ -72,13 +77,15 @@ fi
 
 alias git-root='cd $(git rev-parse --show-toplevel)'
 
-# XXX
-if _exists lsd; then
-  alias ls='lsd'
+# Better ls with icons, tree view and more
+# https://github.com/eza-community/eza
+if _exists eza; then
+  unalias ls
+  alias ls='eza --icons --header --git'
+  alias lt='eza --icons --tree'
+  unalias l
   alias l='ls -l'
-  alias la='ls -a'
-  alias lla='ls -la'
-  alias lt='ls --tree'
+  alias la='ls -lAh'
 fi
 
 # cat with syntax highlighting
@@ -88,4 +95,10 @@ if _exists bat; then
   #   bat --list-themes
   export BAT_THEME='base16'
   alias cat='bat'
+fi
+
+# cd with zsh-z capabilities
+# https://github.com/ajeetdsouza/zoxide
+if _exists zoxide; then
+  alias cd='z'
 fi

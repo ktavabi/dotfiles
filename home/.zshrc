@@ -1,5 +1,5 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
+# Amazon Q pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
 # ------------------------------------------------------------------------------
 
 #
@@ -24,7 +24,7 @@ set -o noclobber
 _extend_path() {
   [[ -d "$1" ]] || return
 
-  if ! $( echo "$PATH" | tr ":" "\n" | grep -qx "$1" ) ; then
+  if ! $(echo "$PATH" | tr ":" "\n" | grep -qx "$1"); then
     export PATH="$1:$PATH"
   fi
 }
@@ -41,11 +41,6 @@ _extend_path "$HOME/.bun/bin"
 # Extend $NODE_PATH
 if [ -d ~/.npm-global ]; then
   export NODE_PATH="$NODE_PATH:$HOME/.npm-global/lib/node_modules"
-fi
-
-# bun completions
-if [ -s "/Users/denysd/.bun/_bun" ]; then
-  source "/Users/denysd/.bun/_bun"
 fi
 
 # Default pager
@@ -69,7 +64,7 @@ export LESS="${less_opts[*]}"
 # Default editor for local and remote sessions
 if [[ -n "$SSH_CONNECTION" ]]; then
   # on the server
-  if [ command -v vim >/dev/null 2>&1 ]; then
+  if command -v vim >/dev/null 2>&1; then
     export EDITOR='vim'
   else
     export EDITOR='vi'
@@ -86,28 +81,13 @@ export TIMEFMT=$'\n================\nCPU\t%P\nuser\t%*U\nsystem\t%*S\ntotal\t%*E
 # ------------------------------------------------------------------------------
 ZSH_DISABLE_COMPFIX=true
 
-# OMZ is managed by Sheldon
-export ZSH="$HOME/.local/share/sheldon/repos/github.com/ohmyzsh/ohmyzsh"
-
-plugins=(
-  history-substring-search
-  git
-  npm
-  yarn
-  nvm
-  sudo
-  extract
-  ssh-agent
-  gpg-agent
-  macos
-  gh
-  common-aliases
-  command-not-found
-  docker
-)
-
 # Autoload node version when changing cwd
 zstyle ':omz:plugins:nvm' autoload true
+
+# Use passphase from macOS keychain
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  zstyle :omz:plugins:ssh-agent ssh-add-args --apple-load-keychain
+fi
 
 # ------------------------------------------------------------------------------
 # Dependencies
@@ -116,9 +96,83 @@ zstyle ':omz:plugins:nvm' autoload true
 # Homebrew.
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# Shell plugins
-eval "$(sheldon source)"
-# Per-directory configs
+# Homebrew.
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Spaceship project directory (for local development)
+SPACESHIP_PROJECT="$HOME/Projects/Repos/spaceship/spaceship-prompt"
+
+# Reset zgen on change
+ZGEN_RESET_ON_CHANGE=(
+  ${HOME}/.zshrc
+  ${DOTFILES}/lib/*.zsh
+)
+
+# Load zgen
+source "${HOME}/.zgen/zgen.zsh"
+
+# Load zgen init script
+if ! zgen saved; then
+  echo "Creating a zgen save"
+
+  zgen oh-my-zsh
+
+  # Oh-My-Zsh plugins
+  zgen oh-my-zsh plugins/git
+  zgen oh-my-zsh plugins/history-substring-search
+  zgen oh-my-zsh plugins/sudo
+  zgen oh-my-zsh plugins/command-not-found
+  zgen oh-my-zsh plugins/npm
+  zgen oh-my-zsh plugins/yarn
+  zgen oh-my-zsh plugins/nvm
+  zgen oh-my-zsh plugins/fnm
+  zgen oh-my-zsh plugins/extract
+  zgen oh-my-zsh plugins/ssh-agent
+  zgen oh-my-zsh plugins/gpg-agent
+  zgen oh-my-zsh plugins/macos
+  zgen oh-my-zsh plugins/vscode
+  zgen oh-my-zsh plugins/gh
+  zgen oh-my-zsh plugins/common-aliases
+  zgen oh-my-zsh plugins/direnv
+  zgen oh-my-zsh plugins/docker
+  zgen oh-my-zsh plugins/docker-compose
+  zgen oh-my-zsh plugins/node
+  zgen oh-my-zsh plugins/deno
+
+  # Custom plugins
+  zgen load chriskempson/base16-shell
+  zgen load djui/alias-tips
+  zgen load marzocchi/zsh-notify
+  zgen load hlissner/zsh-autopair
+  zgen load zsh-users/zsh-syntax-highlighting
+  zgen load zsh-users/zsh-autosuggestions
+
+  # Files
+  zgen load $DOTFILES/lib
+  zgen load $DOTFILES/custom
+
+  # Load Spaceship prompt from remote
+  if [[ ! -d "$SPACESHIP_PROJECT" ]]; then
+    zgen load spaceship-prompt/spaceship-prompt spaceship
+  fi
+
+  # Completions
+  zgen load zsh-users/zsh-completions src
+
+  # Save all to init script
+  zgen save
+fi
+
+# Load Spaceship form local project
+if [[ -d "$SPACESHIP_PROJECT" ]]; then
+  source "$SPACESHIP_PROJECT/spaceship.zsh"
+fi
+
+# ------------------------------------------------------------------------------
+# Init tools
+# ------------------------------------------------------------------------------
+
+# # Per-directory configs
 if command -v direnv >/dev/null 2>&1; then
   eval "$(direnv hook zsh)"
 fi
@@ -133,20 +187,33 @@ eval "$(pyenv virtualenv-init -)"
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+
+# Like cd but with z-zsh capabilities
+if command -v zoxide >/dev/null 2>&1; then
+  eval "$(zoxide init zsh)"
+fi
+
+# ------------------------------------------------------------------------------
+# Load additional zsh files
+# ------------------------------------------------------------------------------
+
+# bun completions
+if [ -s "$HOME/.bun/_bun" ]; then
+  source "$HOME/.bun/_bun"
+  export BUN_INSTALL="$HOME/.bun"
+  export PATH="$BUN_INSTALL/bin:$PATH"
+fi
+
+# Fuzzy finder bindings
+if [ -f "$HOME/.fzf.zsh" ]; then
+  source "$HOME/.fzf.zsh"
+fi
 
 # ------------------------------------------------------------------------------
 # Overrides
 # ------------------------------------------------------------------------------
-
-# Sourcing all zsh files from $DOTFILES/custom
-custom_files=($(find $DOTFILES/custom -type f -name "*.zsh"))
-if [[ "${#custom_files[@]}" -gt 0 ]]; then
-  for file in "${custom_files[@]}"; do
-    source "$file"
-  done
-fi
 
 # Source local configuration
 if [[ -f "$HOME/.zshlocal" ]]; then
@@ -155,5 +222,5 @@ fi
 
 # ------------------------------------------------------------------------------
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+# Amazon Q post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
