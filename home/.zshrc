@@ -10,7 +10,7 @@
 # ------------------------------------------------------------------------------
 
 # Export path to root of dotfiles repo
-export DOTFILES=${DOTFILES:="$HOME/Documents/Projects/Repos/dotfiles"}
+export DOTFILES=${DOTFILES:="$HOME/.dotfiles"}
 
 # Locale
 export LC_ALL=en_US.UTF-8

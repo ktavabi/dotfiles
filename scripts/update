@@ -14,7 +14,7 @@ YELLOW="${e}[0;93m"
 GREEN="${e}[0;92m"
 
 _exists() {
-  command -v "$1" > /dev/null 2>&1
+  command -v "$1" >/dev/null 2>&1
 }
 
 # Success reporter
@@ -59,7 +59,7 @@ update_dotfiles() {
   cd "$DOTFILES" || exit
   git pull upstream master
   ./install --except shell
-  cd - > /dev/null 2>&1 || exit
+  cd - >/dev/null 2>&1 || exit
 
   info "Updating Zsh plugins..."
   zgen selfupdate
@@ -102,13 +102,13 @@ on_finish() {
   success "Happy Coding!"
   echo
   echo -ne "$RED"'-_-_-_-_-_-_-_-_-_-_-_-_-_-_'
-  echo -e  "$RESET""$BOLD"',------,'"$RESET"
+  echo -e "$RESET""$BOLD"',------,'"$RESET"
   echo -ne "$YELLOW"'-_-_-_-_-_-_-_-_-_-_-_-_-_-_'
-  echo -e  "$RESET""$BOLD"'|   /\_/\\'"$RESET"
+  echo -e "$RESET""$BOLD"'|   /\_/\\'"$RESET"
   echo -ne "$GREEN"'-_-_-_-_-_-_-_-_-_-_-_-_-_-'
-  echo -e  "$RESET""$BOLD"'~|__( ^ .^)'"$RESET"
+  echo -e "$RESET""$BOLD"'~|__( ^ .^)'"$RESET"
   echo -ne "$CYAN"'-_-_-_-_-_-_-_-_-_-_-_-_-_-_'
-  echo -e  "$RESET""$BOLD"'""  ""'"$RESET"
+  echo -e "$RESET""$BOLD"'""  ""'"$RESET"
   echo
 }
 
@@ -125,7 +125,7 @@ main() {
   on_start "$*"
   update_dotfiles "$*"
   update_brew "$*"
-  update_apt_get "$*"
+  #  update_apt_get "$*"
   on_finish "$*"
 }
 

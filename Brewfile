@@ -38,6 +38,8 @@ brew "php"
 brew "pyenv"
 brew "pyenv-virtualenv"
 brew "shellcheck"
+brew "fd"
+brew "fzf"
 
 
 # ------------------------------------------------------------------------------
