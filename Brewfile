@@ -39,7 +39,8 @@ brew "pyenv"
 brew "pyenv-virtualenv"
 brew "shellcheck"
 brew "fd"
-brew "fzf"
+brew "howdoi"
+brew "jq"
 
 
 # ------------------------------------------------------------------------------
