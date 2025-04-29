@@ -37,6 +37,11 @@ _extend_path "$HOME/.rvm/bin"
 _extend_path "$HOME/.yarn/bin"
 _extend_path "$HOME/.config/yarn/global/node_modules/.bin"
 _extend_path "$HOME/.bun/bin"
+_extend_path "/usr/local/bin"
+_extend_path "/usr/bin"
+_extend_path "/bin"
+_extend_path "/usr/sbin"
+_extend_path "/sbin"
 
 # Extend $NODE_PATH
 if [ -d ~/.npm-global ]; then
