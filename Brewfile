@@ -7,6 +7,7 @@
 brew "git"
 brew "zsh"
 brew "zsh-completions"
+brew "nvim"
 brew "node"
 brew "coreutils"
 brew "tree"
@@ -58,6 +59,7 @@ cask "font-fira-code-nerd-font"
 cask "font-hasklug-nerd-font"
 
 # Utils
+cask "raycast"
 cask "gpg-suite"
 #cask "openvpn-connect"
 
@@ -67,10 +69,10 @@ cask "handbrake"
 cask "vlc"
 
 # Development
+cask "multipass"
 cask "iterm2"
 cask "github"
-cask "fig"
-cask "vscodium"
+cask "ghostty"
 
 # Desktop applications
 cask "telegram"

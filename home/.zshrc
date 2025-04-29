@@ -1,7 +1,3 @@
-# Amazon Q pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
-# ------------------------------------------------------------------------------
-
 #
 # ~/.zshrc
 #
@@ -111,6 +107,7 @@ SPACESHIP_PROJECT="$HOME/Projects/Repos/spaceship/spaceship-prompt"
 ZGEN_RESET_ON_CHANGE=(
   ${HOME}/.zshrc
   ${DOTFILES}/lib/*.zsh
+  ${DOTFILES}/custom/*.zsh
 )
 
 # Load zgen
@@ -144,17 +141,18 @@ if ! zgen saved; then
   zgen oh-my-zsh plugins/node
   zgen oh-my-zsh plugins/deno
 
-  # Custom plugins
-  zgen load chriskempson/base16-shell
-  zgen load djui/alias-tips
-  zgen load marzocchi/zsh-notify
-  zgen load hlissner/zsh-autopair
-  zgen load zsh-users/zsh-syntax-highlighting
-  zgen load zsh-users/zsh-autosuggestions
+    # Custom plugins
+    zgen load chriskempson/base16-shell
+    zgen load djui/alias-tips
+    zgen load marzocchi/zsh-notify
+    zgen load hlissner/zsh-autopair
+    zgen load zsh-users/zsh-syntax-highlighting
+    zgen load zsh-users/zsh-autosuggestions
+    zgen load Aloxaf/fzf-tab
 
-  # Files
-  zgen load $DOTFILES/lib
-  zgen load $DOTFILES/custom
+    # Files
+    zgen load $DOTFILES/lib
+    zgen load $DOTFILES/custom
 
   # Load Spaceship prompt from remote
   if [[ ! -d "$SPACESHIP_PROJECT" ]]; then
@@ -226,6 +224,3 @@ if [[ -f "$HOME/.zshlocal" ]]; then
 fi
 
 # ------------------------------------------------------------------------------
-
-# Amazon Q post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
