@@ -1,149 +1,129 @@
 {
-  "rpath": {
-    "windows": "",
-    "mac": "",
-    "linux": ""
-  },
-  "rterm": {
-    "windows": "",
-    "mac": "",
-    "linux": "",
-    "option": ["--no-save", "--no-restore"]
-  },
-  "libPaths": [],
-  "useRenvLibPath": false,
-  "lsp": {
-    "enabled": true,
-    "args": [],
-    "promptToInstall": true,
-    "debug": false,
-    "diagnostics": true,
-    "lang": "",
-    "use_stdio": false,
-    "multiServer": true
-  },
-  "rmarkdown": {
-    "codeLensCommands": ["r.runCurrentChunk", "r.runAboveChunks"],
-    "enableCodeLens": true,
-    "chunkBackgroundColor": "rgba(128, 128, 128, 0.1)",
-    "preview": {
-      "autoRefresh": true,
-      "zoom": 1
-    },
-    "knit": {
-      "useBackgroundProcess": true,
-      "focusOutputChannel": true,
-      "openOutputFile": false,
-      "command": "rmarkdown::render",
-      "defaults": {
-        "knitWorkingDirectory": "document directory"
-      }
-    }
-  },
+  "alwaysUseActiveTerminal": false,
+  "bracketedPaste": false,
+  "editor.accessibilitySupport": "off",
+  "editor.minimap.enabled": true,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
   "helpPanel": {
-    "enableSyntaxHighlighting": true,
     "cacheIndexFiles": "None",
-    "previewLocalPackages": ["."],
-    "rpath": "",
-    "enableHoverLinks": true,
     "clickCodeExamples": {
       "Click": "Copy",
       "Ctrl+Click": "Run",
       "Shift+Click": "Ignore"
-    }
-  },
-  "source": {
-    "encoding": "UTF-8",
-    "echo": false,
-    "focus": "editor"
-  },
-  "alwaysUseActiveTerminal": false,
-  "bracketedPaste": false,
-  "removeLeadingComments": false,
-  "sessionWatcher": true,
-  "session": {
-    "useWebServer": false,
-    "watchGlobalEnvironment": true,
-    "objectLengthLimit": 2000,
-    "objectTimeout": 50,
-    "levelOfObjectDetail": "Minimal",
-    "emulateRStudioAPI": true,
-    "data": {
-      "rowLimit": 0,
-      "pageSize": 500
     },
-    "viewers": {
-      "viewColumn": {
-        "plot": "Two",
-        "browser": "Active",
-        "viewer": "Two",
-        "pageViewer": "Active",
-        "view": "Two",
-        "helpPanel": "Two"
-      }
-    }
+    "enableHoverLinks": true,
+    "enableSyntaxHighlighting": true,
+    "previewLocalPackages": ["."],
+    "rpath": ""
   },
-  "rtermSendDelay": 8,
-  "workspaceViewer": {
-    "showObjectSize": false,
-    "removeHiddenItems": false,
-    "clearPrompt": true
-  },
+  "libPaths": [],
   "liveShare": {
-    "timeout": 10000,
     "defaults": {
       "commandForward": false,
-      "shareWorkspace": true,
-      "shareBrowser": false
-    }
+      "shareBrowser": false,
+      "shareWorkspace": true
+    },
+    "timeout": 10000
+  },
+  "lsp": {
+    "args": [],
+    "debug": false,
+    "diagnostics": true,
+    "enabled": true,
+    "lang": "",
+    "multiServer": true,
+    "promptToInstall": true,
+    "use_stdio": false
   },
   "plot": {
-    "devArgs": {
-      "width": 800,
-      "height": 1200
-    },
-    "useHttpgd": false,
+    "customStyleOverwrites": "",
     "defaults": {
       "colorTheme": "original",
-      "plotPreviewLayout": "multirow",
-      "fullWindowMode": false
+      "fullWindowMode": false,
+      "plotPreviewLayout": "multirow"
+    },
+    "devArgs": {
+      "height": 1200,
+      "width": 800
     },
     "timing": {
-      "resizeInterval": 100,
-      "refreshInterval": 10
+      "refreshInterval": 10,
+      "resizeInterval": 100
     },
-    "customStyleOverwrites": ""
+    "useHttpgd": false
   },
-  "editor.accessibilitySupport": "off",
-  "explorer.confirmDelete": false,
-  "git.autofetch": true,
-  "explorer.confirmDragAndDrop": false,
-  "workbench.iconTheme": "bearded-icons",
-  "workbench.colorTheme": "Bearded Theme Surprising Watermelon",
-  "explorer.confirmPasteNative": false,
-  "markyMarkdown.statsShowReadingTime": true,
-  "markyMarkdown.statsShowWords": true,
-  "markyMarkdown.statsShowLines": true,
-  "markyMarkdown.statsShowCharacters": true,
-  "git.confirmSync": false,
+  "projectManager.git.baseFolders": ["/Users/kam/Documents/Projects/Repos", "/Users/kam/Documents/Projects/Forks"],
+  "redhat.telemetry.enabled": false,
+  "removeLeadingComments": false,
+  "rmarkdown": {
+    "chunkBackgroundColor": "rgba(128, 128, 128, 0.1)",
+    "codeLensCommands": ["r.runCurrentChunk", "r.runAboveChunks"],
+    "enableCodeLens": true,
+    "knit": {
+      "command": "rmarkdown::render",
+      "defaults": {
+        "knitWorkingDirectory": "document directory"
+      },
+      "focusOutputChannel": true,
+      "openOutputFile": false,
+      "useBackgroundProcess": true
+    },
+    "preview": {
+      "autoRefresh": true,
+      "zoom": 1
+    }
+  },
+  "rpath": {
+    "linux": "",
+    "mac": "",
+    "windows": ""
+  },
+  "rterm": {
+    "linux": "",
+    "mac": "",
+    "option": ["--no-save", "--no-restore"],
+    "windows": ""
+  },
+  "rtermSendDelay": 8,
+  "session": {
+    "data": {
+      "pageSize": 500,
+      "rowLimit": 0
+    },
+    "emulateRStudioAPI": true,
+    "levelOfObjectDetail": "Minimal",
+    "objectLengthLimit": 2000,
+    "objectTimeout": 50,
+    "useWebServer": false,
+    "viewers": {
+      "viewColumn": {
+        "browser": "Active",
+        "helpPanel": "Two",
+        "pageViewer": "Active",
+        "plot": "Two",
+        "view": "Two",
+        "viewer": "Two"
+      }
+    },
+    "watchGlobalEnvironment": true
+  },
+  "sessionWatcher": true,
+  "source": {
+    "echo": false,
+    "encoding": "UTF-8",
+    "focus": "editor"
+  },
+  "useRenvLibPath": false,
+  "workspaceViewer": {
+    "clearPrompt": true,
+    "removeHiddenItems": false,
+    "showObjectSize": false
+  },
+  "workbench.colorTheme": "Default Dark Modern",
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "files.autoSave": "onFocusChange",
-  "editor.formatOnSave": true,
-  "editor.formatOnType": true,
-  "notebook.formatOnCellExecution": true,
-  "notebook.formatOnSave.enabled": true,
-  "editor.formatOnPaste": true,
-  "editor.formatOnSaveMode": "modificationsIfAvailable",
-  "markdown.copyFiles.destination": {
-    "markdown.copyFiles.destination": "research/assets/figures/"
-  },
-  "cursor.composer.shouldAutoScrollToBottom": false,
-  "cursor.composer.shouldChimeAfterChatFinishes": true,
-  "vsicons.dontShowNewVersionMessage": true,
-  "editor.minimap.enabled": true,
-  "cursor.cpp.disabledLanguages": ["plaintext"],
-  "cursor.composer.collapsePaneInputBoxPills": true,
-  "cursor.cpp.enablePartialAccepts": true
+  "editor.linkedEditing": true,
+  "jupyter.interactiveWindow.creationMode": "perFile"
 }

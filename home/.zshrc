@@ -107,7 +107,7 @@ SPACESHIP_PROJECT="$HOME/Projects/Repos/spaceship/spaceship-prompt"
 ZGEN_RESET_ON_CHANGE=(
   ${HOME}/.zshrc
   ${DOTFILES}/lib/*.zsh
-  ${DOTFILES}/custom/*.zsh
+  ${DOTFILES}/custom/*.zsh(N)
 )
 
 # Load zgen
@@ -152,7 +152,11 @@ if ! zgen saved; then
 
     # Files
     zgen load $DOTFILES/lib
-    zgen load $DOTFILES/custom
+
+    # Load custom files if directory exists
+    if [[ -d "$DOTFILES/custom" ]]; then
+      zgen load $DOTFILES/custom
+    fi
 
   # Load Spaceship prompt from remote
   if [[ ! -d "$SPACESHIP_PROJECT" ]]; then
