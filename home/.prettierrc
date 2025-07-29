@@ -1,5 +1,37 @@
 {
   "singleQuote": true,
   "printWidth": 120,
-  "proseWrap": "always"
+  "proseWrap": "always",
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": true,
+  "trailingComma": "es5",
+  "bracketSpacing": true,
+  "bracketSameLine": false,
+  "arrowParens": "avoid",
+  "endOfLine": "lf",
+  "overrides": [
+    {
+      "files": "*.md",
+      "options": {
+        "printWidth": 80,
+        "proseWrap": "always",
+        "tabWidth": 2
+      }
+    },
+    {
+      "files": "*.py",
+      "options": {
+        "printWidth": 88,
+        "tabWidth": 4
+      }
+    },
+    {
+      "files": "*.{r,R}",
+      "options": {
+        "printWidth": 80,
+        "tabWidth": 2
+      }
+    }
+  ]
 }

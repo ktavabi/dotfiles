@@ -16,7 +16,46 @@ indent_size = 2
 # Python-specific settings
 [*.py]
 indent_size = 4
+max_line_length = 88
+
+# Python configuration files
+[*.{cfg,ini,setup.cfg,pyproject.toml}]
+indent_size = 4
+
+# R files
+[*.{r,R}]
+indent_size = 2
+indent_style = space
+
+# R Markdown files
+[*.{rmd,Rmd}]
+indent_size = 2
+indent_style = space
 
 # Markdown files shouldn't trim trailing whitespace
 [*.md]
 trim_trailing_whitespace = false
+
+# YAML files (for R projects, configs)
+[*.{yml,yaml}]
+indent_size = 2
+indent_style = space
+
+# JSON files
+[*.json]
+indent_size = 2
+indent_style = space
+
+# Shell scripts
+[*.{sh,bash,zsh}]
+indent_size = 2
+indent_style = space
+
+# Makefiles must use tabs
+[Makefile]
+indent_style = tab
+
+# Docker files
+[Dockerfile]
+indent_size = 4
+indent_style = space

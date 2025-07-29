@@ -80,7 +80,7 @@ export TIMEFMT=$'\n================\nCPU\t%P\nuser\t%*U\nsystem\t%*S\ntotal\t%*E
 # ------------------------------------------------------------------------------
 # Oh My Zsh
 # ------------------------------------------------------------------------------
-ZSH_DISABLE_COMPFIX=true
+export ZSH_DISABLE_COMPFIX=true
 
 # Autoload node version when changing cwd
 zstyle ':omz:plugins:nvm' autoload true
@@ -104,12 +104,11 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 SPACESHIP_PROJECT="$HOME/Projects/Repos/spaceship/spaceship-prompt"
 
 # Reset zgen on change
-ZGEN_RESET_ON_CHANGE=(
-  ${HOME}/.zshrc
-  ${DOTFILES}/lib/*.zsh
-  ${DOTFILES}/custom/*.zsh(N)
+export ZGEN_RESET_ON_CHANGE=(
+  "${HOME}/.zshrc"
+  "${DOTFILES}"/lib/*.zsh
+  "${DOTFILES}"/custom/*.zsh
 )
-
 # Load zgen
 source "${HOME}/.zgen/zgen.zsh"
 
@@ -119,32 +118,44 @@ if ! zgen saved; then
 
   zgen oh-my-zsh
 
-  # Oh-My-Zsh plugins
-  zgen oh-my-zsh plugins/git
-  zgen oh-my-zsh plugins/history-substring-search
-  zgen oh-my-zsh plugins/sudo
-  zgen oh-my-zsh plugins/command-not-found
-  zgen oh-my-zsh plugins/npm
-  zgen oh-my-zsh plugins/yarn
-  zgen oh-my-zsh plugins/nvm
-  zgen oh-my-zsh plugins/fnm
-  zgen oh-my-zsh plugins/extract
-  zgen oh-my-zsh plugins/ssh-agent
-  zgen oh-my-zsh plugins/gpg-agent
-  zgen oh-my-zsh plugins/macos
-  zgen oh-my-zsh plugins/vscode
-  zgen oh-my-zsh plugins/gh
-  zgen oh-my-zsh plugins/common-aliases
-  zgen oh-my-zsh plugins/direnv
-  zgen oh-my-zsh plugins/docker
-  zgen oh-my-zsh plugins/docker-compose
-  zgen oh-my-zsh plugins/node
-  zgen oh-my-zsh plugins/deno
+    # Oh-My-Zsh plugins
+    zgen oh-my-zsh plugins/git
+    zgen oh-my-zsh plugins/history-substring-search
+    zgen oh-my-zsh plugins/sudo
+    zgen oh-my-zsh plugins/command-not-found
+    zgen oh-my-zsh plugins/npm
+    zgen oh-my-zsh plugins/yarn
+    zgen oh-my-zsh plugins/nvm
+    zgen oh-my-zsh plugins/fnm
+    zgen oh-my-zsh plugins/extract
+    zgen oh-my-zsh plugins/ssh-agent
+    zgen oh-my-zsh plugins/gpg-agent
+    zgen oh-my-zsh plugins/macos
+    zgen oh-my-zsh plugins/bgnotify
+    zgen oh-my-zsh plugins/vscode
+    zgen oh-my-zsh plugins/gh
+    zgen oh-my-zsh plugins/common-aliases
+    zgen oh-my-zsh plugins/direnv
+    zgen oh-my-zsh plugins/docker
+    zgen oh-my-zsh plugins/docker-compose
+    zgen oh-my-zsh plugins/node
+    zgen oh-my-zsh plugins/deno
+    zgen oh-my-zsh plugins/bun
+    zgen oh-my-zsh plugins/tldr
+
+    # Like cd but with z-zsh capabilities
+    if command -v zoxide >/dev/null 2>&1; then
+      zgen oh-my-zsh plugins/zoxide
+    fi
+
+    # Per-directory env vars
+    if command -v direnv >/dev/null 2>&1; then
+      zgen oh-my-zsh plugins/direnv
+    fi
 
     # Custom plugins
     zgen load chriskempson/base16-shell
     zgen load djui/alias-tips
-    zgen load marzocchi/zsh-notify
     zgen load hlissner/zsh-autopair
     zgen load zsh-users/zsh-syntax-highlighting
     zgen load zsh-users/zsh-autosuggestions
@@ -206,13 +217,6 @@ fi
 # Load additional zsh files
 # ------------------------------------------------------------------------------
 
-# bun completions
-if [ -s "$HOME/.bun/_bun" ]; then
-  source "$HOME/.bun/_bun"
-  export BUN_INSTALL="$HOME/.bun"
-  export PATH="$BUN_INSTALL/bin:$PATH"
-fi
-
 # Fuzzy finder bindings
 if [ -f "$HOME/.fzf.zsh" ]; then
   source "$HOME/.fzf.zsh"
@@ -228,3 +232,4 @@ if [[ -f "$HOME/.zshlocal" ]]; then
 fi
 
 # ------------------------------------------------------------------------------
+
