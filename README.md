@@ -131,7 +131,7 @@ Dotfiles also include some functions that will make your life easier. See code i
 - `gz` — get gzipped file size
 - `n` — runs given command using binary in `node_modules/.bin` of the current project.
 - `nyan` — print [nyan cat](https://www.youtube.com/watch?v=QH2-TGUlwu4).
-- `server` — start an HTTP server from a directory.
+- `password` — generate a random password and copy it to the clipboard.
 
 ### Git
 
@@ -188,7 +188,6 @@ Dotfiles also include some functions that will make your life easier. See code i
 Resources to make dotfiles:
 
 - [GitHub ❤ ~/](http://dotfiles.github.com/)
-- [Artem Sapegin’s dotfiles](https://github.com/sapegin/dotfiles)
 - [Mathias’s dotfiles](https://github.com/mathiasbynens/dotfiles)
 
 ## License
