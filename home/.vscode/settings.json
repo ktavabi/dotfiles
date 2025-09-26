@@ -1,21 +1,23 @@
 {
   // Language-specific formatter settings
   "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.wordWrap": "on",
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
     "editor.quickSuggestions": {
-      "other": true,
       "comments": true,
+      "other": true,
       "strings": true
-    }
+    },
+    "editor.wordWrap": "on"
   },
   "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter",
-    "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
       "source.organizeImports": "explicit"
     },
-    "editor.rulers": [88],
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.rulers": [
+      88
+    ],
     "editor.wordWrap": "off"
   },
   "[r]": {
@@ -27,58 +29,18 @@
     "editor.defaultFormatter": "REditorSupport.r",
     "editor.wordWrap": "on"
   },
-
   // General editor settings
   "alwaysUseActiveTerminal": false,
   "bracketedPaste": false,
-  "editor.accessibilitySupport": "off",
-  "editor.linkedEditing": true,
-  "editor.minimap.enabled": true,
-  "editor.formatOnSave": true,
-  "editor.formatOnPaste": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll": "explicit",
-    "source.organizeImports": "explicit"
-  },
-  "editor.tabSize": 2,
-  "editor.insertSpaces": true,
-  "editor.detectIndentation": true,
-  "editor.rulers": [80, 100],
-  "editor.wordWrap": "bounded",
-  "editor.wordWrapColumn": 100,
-  "editor.bracketPairColorization.enabled": true,
-  "editor.guides.bracketPairs": true,
-  "editor.suggestSelection": "first",
-  "editor.acceptSuggestionOnCommitCharacter": false,
-  "editor.acceptSuggestionOnEnter": "on",
-  "editor.snippetSuggestions": "top",
-
-  // Explorer settings
-  "explorer.confirmDelete": false,
-  "explorer.confirmDragAndDrop": false,
-  "explorer.incrementalNaming": "smart",
-  "explorer.compactFolders": false,
-
-  // File associations
-  "files.associations": {
-    "*.R": "r",
-    "*.r": "r",
-    "*.Rmd": "rmd",
-    "*.rmd": "rmd",
-    "*.py": "python",
-    "*.md": "markdown"
-  },
-
-  // Python settings
-  "python.defaultInterpreterPath": "python3",
-  "python.analysis.typeCheckingMode": "basic",
-  "python.analysis.autoImportCompletions": true,
-  "python.analysis.autoSearchPaths": true,
-  "python.analysis.diagnosticMode": "workspace",
-  "python.analysis.include": [
-    "**/*.py"
+  "cSpell.userWords": [
+    "biostatisticians"
   ],
-  "python.analysis.exclude": [
+  "cursor.composer.shouldChimeAfterChatFinishes": true,
+  "cursor.cpp.enablePartialAccepts": true,
+  "cursorpyright.analysis.autoImportCompletions": true,
+  "cursorpyright.analysis.autoSearchPaths": true,
+  "cursorpyright.analysis.diagnosticMode": "workspace",
+  "cursorpyright.analysis.exclude": [
     "**/node_modules",
     "**/__pycache__",
     "**/*.pyc",
@@ -87,107 +49,87 @@
     "**/venv",
     "**/.env"
   ],
-  "python.linting.enabled": true,
-  "python.linting.pylintEnabled": true,
-  "python.linting.flake8Enabled": true,
-  "python.linting.mypyEnabled": true,
-  "python.linting.lintOnSave": true,
-  "python.formatting.provider": "black",
-  "python.sortImports.args": ["--profile", "black"],
-  "python.testing.pytestEnabled": true,
-  "python.testing.unittestEnabled": false,
-  "python.testing.nosetestsEnabled": false,
-  "python.testing.pytestArgs": [
-    "tests"
+  "cursorpyright.analysis.include": [
+    "**/*.py"
   ],
-
-  // R settings
-  "r.bracketedPaste": true,
-  "r.rterm.option": [
-    "--no-save",
-    "--no-restore",
-    "--no-site-file"
+  "cursorpyright.analysis.typeCheckingMode": "basic",
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.acceptSuggestionOnEnter": "on",
+  "editor.accessibilitySupport": "off",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "editor.detectIndentation": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.guides.bracketPairs": true,
+  "editor.insertSpaces": true,
+  "editor.linkedEditing": true,
+  "editor.minimap.enabled": true,
+  "editor.rulers": [
+    80,
+    100
   ],
-  "r.sessionWatcher": true,
-  "r.useRadian": true,
-  "r.rpath.mac": "/usr/local/bin/R",
-  "r.lsp.enabled": true,
-  "r.lsp.diagnostics": true,
-  "r.lsp.multiServer": true,
-  "r.lsp.promptToInstall": true,
-  "r.lsp.debug": false,
-  "r.lsp.args": [],
-  "r.lsp.use_stdio": false,
-  "r.lsp.lang": "",
-
-  // Markdown settings
-  "markdown.preview.breaks": true,
-  "markdown.preview.linkify": true,
-  "markdown.preview.scrollPreviewWithEditor": true,
-  "markdown.preview.scrollEditorWithPreview": true,
-  "markdown.preview.fontSize": 14,
-  "markdown.preview.lineHeight": 1.6,
-  "markdown.preview.markers": true,
-  "markdown.preview.typographer": true,
-
-  // Jupyter settings
-  "jupyter.interactiveWindow.creationMode": "perFile",
-  "jupyter.askForKernelRestart": false,
-  "jupyter.enableAutoMatcher": true,
-  "jupyter.enableExtendedKernelCompletions": true,
-  "jupyter.interactiveWindow.textEditor.executeSelection": "sendToInteractiveWindow",
-
-  // Git settings
-  "git.enableSmartCommit": true,
-  "git.confirmSync": false,
-  "git.autofetch": true,
-  "git.autofetchPeriod": 180,
-
-  // Terminal settings
-  "terminal.integrated.defaultProfile.osx": "zsh",
-  "terminal.integrated.fontSize": 14,
-  "terminal.integrated.lineHeight": 1.2,
-  "terminal.integrated.cursorBlinking": true,
-  "terminal.integrated.cursorStyle": "line",
-
-  // Workbench settings
-  "workbench.colorTheme": "Default Dark Modern",
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.startupEditor": "newUntitledFile",
-  "workbench.editor.enablePreview": false,
-  "workbench.editor.enablePreviewFromQuickOpen": false,
-  "workbench.editor.showTabs": "multiple",
-  "workbench.editor.tabSizing": "shrink",
-  "workbench.editor.wrapTabs": false,
-  "workbench.editor.decorations.badges": true,
-  "workbench.editor.decorations.colors": true,
-
-  // File watching
-  "files.watcherExclude": {
-    "**/node_modules/**": true,
-    "**/__pycache__/**": true,
-    "**/.git/**": true,
-    "**/.venv/**": true,
-    "**/venv/**": true,
-    "**/.Rhistory": true,
-    "**/.RData": true
-  },
-
-  // Search settings
-  "search.exclude": {
-    "**/node_modules": true,
-    "**/__pycache__": true,
-    "**/.git": true,
-    "**/.venv": true,
-    "**/venv": true,
-    "**/.Rhistory": true,
-    "**/.RData": true
-  },
-
+  "editor.snippetSuggestions": "top",
+  "editor.suggestSelection": "first",
+  "editor.tabSize": 2,
+  "editor.wordWrap": "bounded",
+  "editor.wordWrapColumn": 100,
+  "explorer.compactFolders": false,
+  // Explorer settings
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.incrementalNaming": "smart",
+  "extensions.autoCheckUpdates": true,
   // Extensions settings
   "extensions.autoUpdate": true,
-  "extensions.autoCheckUpdates": true,
-
+  // File associations
+  "files.associations": {
+    "*.md": "markdown",
+    "*.py": "python",
+    "*.r": "r",
+    "*.R": "r",
+    "*.rmd": "rmd",
+    "*.Rmd": "rmd"
+  },
+  // File watching
+  "files.watcherExclude": {
+    "**/__pycache__/**": true,
+    "**/.git/**": true,
+    "**/.RData": true,
+    "**/.Rhistory": true,
+    "**/.venv/**": true,
+    "**/node_modules/**": true,
+    "**/venv/**": true
+  },
+  "git.autofetch": true,
+  "git.autofetchPeriod": 180,
+  "git.confirmSync": false,
+  // Git settings
+  "git.enableSmartCommit": true,
+  // Help panel settings
+  "helpPanel": {
+    "cacheIndexFiles": "None",
+    "clickCodeExamples": {
+      "Click": "Copy",
+      "Ctrl+Click": "Run",
+      "Shift+Click": "Ignore"
+    },
+    "enableHoverLinks": true,
+    "enableSyntaxHighlighting": true,
+    "previewLocalPackages": [
+      "."
+    ],
+    "rpath": ""
+  },
+  "jupyter.askForKernelRestart": false,
+  "jupyter.enableAutoMatcher": true,
+  "jupyter.enableExtendedPythonKernelCompletions": true,
+  // Jupyter settings
+  "jupyter.interactiveWindow.creationMode": "perFile",
+  "jupyter.interactiveWindow.textEditor.executeSelection": "sendToInteractiveWindow",
   // Live Share settings
   "liveShare": {
     "defaults": {
@@ -197,13 +139,104 @@
     },
     "timeout": 10000
   },
-
+  // LSP settings
+  "lsp": {
+    "args": [],
+    "debug": false,
+    "diagnostics": true,
+    "enabled": true,
+    "lang": "",
+    "multiServer": true,
+    "promptToInstall": true,
+    "use_stdio": false
+  },
+  // Markdown settings
+  "markdown.preview.breaks": true,
+  "markdown.preview.fontSize": 14,
+  "markdown.preview.lineHeight": 1.6,
+  "markdown.preview.linkify": true,
+  "markdown.preview.markers": true,
+  "markdown.preview.scrollEditorWithPreview": true,
+  "markdown.preview.scrollPreviewWithEditor": true,
+  "markdown.preview.typographer": true,
+  // Plot settings
+  "plot": {
+    "customStyleOverwrites": "",
+    "defaults": {
+      "colorTheme": "original",
+      "fullWindowMode": false,
+      "plotPreviewLayout": "multirow"
+    },
+    "devArgs": {
+      "height": 1200,
+      "width": 800
+    },
+    "timing": {
+      "refreshInterval": 10,
+      "resizeInterval": 100
+    },
+    "useHttpgd": false
+  },
   // Project Manager settings
   "projectManager.git.baseFolders": [
     "/Users/kam/Documents/Projects/Repos",
     "/Users/kam/Documents/Projects/Forks"
   ],
-
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.autoSearchPaths": true,
+  "python.analysis.diagnosticMode": "workspace",
+  "python.analysis.exclude": [
+    "**/node_modules",
+    "**/__pycache__",
+    "**/*.pyc",
+    "**/.git",
+    "**/.venv",
+    "**/venv",
+    "**/.env"
+  ],
+  "python.analysis.include": [
+    "**/*.py"
+  ],
+  "python.analysis.typeCheckingMode": "basic",
+  // Python settings
+  "python.defaultInterpreterPath": "python3",
+  "python.formatting.provider": "black",
+  "python.linting.enabled": true,
+  "python.linting.flake8Enabled": true,
+  "python.linting.lintOnSave": true,
+  "python.linting.mypyEnabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.sortImports.args": [
+    "--profile",
+    "black"
+  ],
+  "python.testing.nosetestsEnabled": false,
+  "python.testing.pytestArgs": [
+    "tests"
+  ],
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": false,
+  // R settings
+  "r.bracketedPaste": true,
+  "r.lsp.args": [],
+  "r.lsp.debug": false,
+  "r.lsp.diagnostics": true,
+  "r.lsp.enabled": true,
+  "r.lsp.lang": "",
+  "r.lsp.multiServer": true,
+  "r.lsp.promptToInstall": true,
+  "r.lsp.use_stdio": false,
+  "r.rpath.mac": "/usr/local/bin/R",
+  "r.rterm.option": [
+    "--no-save",
+    "--no-restore",
+    "--no-site-file"
+  ],
+  "r.sessionWatcher": true,
+  "r.useRadian": true,
+  // Telemetry settings
+  "redhat.telemetry.enabled": false,
+  "removeLeadingComments": false,
   // R Markdown specific settings
   "rmarkdown": {
     "chunkBackgroundColor": "rgba(128, 128, 128, 0.1)",
@@ -226,14 +259,12 @@
       "zoom": 1
     }
   },
-
   // R path settings
   "rpath": {
     "linux": "",
     "mac": "",
     "windows": ""
   },
-
   // R terminal settings
   "rterm": {
     "linux": "",
@@ -244,9 +275,17 @@
     ],
     "windows": ""
   },
-
   "rtermSendDelay": 8,
-
+  // Search settings
+  "search.exclude": {
+    "**/__pycache__": true,
+    "**/.git": true,
+    "**/.RData": true,
+    "**/.Rhistory": true,
+    "**/.venv": true,
+    "**/node_modules": true,
+    "**/venv": true
+  },
   // R session settings
   "session": {
     "data": {
@@ -270,75 +309,36 @@
     },
     "watchGlobalEnvironment": true
   },
-
   "sessionWatcher": true,
-
   // R source settings
   "source": {
     "echo": false,
     "encoding": "UTF-8",
     "focus": "editor"
   },
-
+  "telemetry.telemetryLevel": "off",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+  // Terminal settings
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.lineHeight": 1.2,
   "useRenvLibPath": false,
-
-  // Plot settings
-  "plot": {
-    "customStyleOverwrites": "",
-    "defaults": {
-      "colorTheme": "original",
-      "fullWindowMode": false,
-      "plotPreviewLayout": "multirow"
-    },
-    "devArgs": {
-      "height": 1200,
-      "width": 800
-    },
-    "timing": {
-      "refreshInterval": 10,
-      "resizeInterval": 100
-    },
-    "useHttpgd": false
-  },
-
+  // Workbench settings
+  "workbench.colorTheme": "Default Dark Modern",
+  "workbench.editor.decorations.badges": true,
+  "workbench.editor.decorations.colors": true,
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.editor.showTabs": "multiple",
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.editor.wrapTabs": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "newUntitledFile",
   // Workspace viewer settings
   "workspaceViewer": {
     "clearPrompt": true,
     "removeHiddenItems": false,
     "showObjectSize": false
-  },
-
-  // Telemetry settings
-  "redhat.telemetry.enabled": false,
-  "telemetry.telemetryLevel": "off",
-
-  // Help panel settings
-  "helpPanel": {
-    "cacheIndexFiles": "None",
-    "clickCodeExamples": {
-      "Click": "Copy",
-      "Ctrl+Click": "Run",
-      "Shift+Click": "Ignore"
-    },
-    "enableHoverLinks": true,
-    "enableSyntaxHighlighting": true,
-    "previewLocalPackages": [
-      "."
-    ],
-    "rpath": ""
-  },
-
-  // LSP settings
-  "lsp": {
-    "args": [],
-    "debug": false,
-    "diagnostics": true,
-    "enabled": true,
-    "lang": "",
-    "multiServer": true,
-    "promptToInstall": true,
-    "use_stdio": false
-  },
-
-  "removeLeadingComments": false
+  }
 }
