@@ -107,7 +107,6 @@ SPACESHIP_PROJECT="$HOME/Projects/Repos/spaceship/spaceship-prompt"
 export ZGEN_RESET_ON_CHANGE=(
   "${HOME}/.zshrc"
   "${DOTFILES}"/lib/*.zsh
-  "${DOTFILES}"/custom/*.zsh
 )
 # Load zgen
 source "${HOME}/.zgen/zgen.zsh"
