@@ -14,7 +14,7 @@
   new = green bold
 
 [core]
-  editor = vim
+	editor = nano -w
   excludesfile = ~/.gitignore
   attributesfile = ~/.gitattributes
   ignorecase = false
