@@ -43,6 +43,8 @@ brew "fd"
 brew "howdoi"
 brew "jq"
 
+brew "codex"
+brew "gemini-cli"
 
 # ------------------------------------------------------------------------------
 # Taps

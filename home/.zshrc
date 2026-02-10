@@ -118,6 +118,7 @@ if ! zgen saved; then
   zgen oh-my-zsh
 
     # Oh-My-Zsh plugins
+    zgen oh-my-zsh plugins/brew
     zgen oh-my-zsh plugins/git
     zgen oh-my-zsh plugins/history-substring-search
     zgen oh-my-zsh plugins/sudo
@@ -141,6 +142,7 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/deno
     zgen oh-my-zsh plugins/bun
     zgen oh-my-zsh plugins/tldr
+    zgen oh-my-zsh plugins/fzf
 
     # Like cd but with z-zsh capabilities
     if command -v zoxide >/dev/null 2>&1; then
@@ -159,10 +161,6 @@ if ! zgen saved; then
     zgen load zsh-users/zsh-syntax-highlighting
     zgen load zsh-users/zsh-autosuggestions
     zgen load Aloxaf/fzf-tab
-
-    # Load bgnotify with a fix for Ghostty and Alacritty
-    # FIXME: remove when merged in ohmyzsh
-    zgen load https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/08163e44a0d92c824a3531259a26fcca91d2dbaa/plugins/bgnotify/bgnotify.plugin.zsh
 
     # Files
     zgen load $DOTFILES/lib
@@ -220,9 +218,9 @@ fi
 # Load additional zsh files
 # ------------------------------------------------------------------------------
 
-# Fuzzy finder bindings
-if [ -f "$HOME/.fzf.zsh" ]; then
-  source "$HOME/.fzf.zsh"
+# OpenAI Codex CLI completions
+if _exists codex; then
+  eval "$(codex completion zsh)"
 fi
 
 # ------------------------------------------------------------------------------
