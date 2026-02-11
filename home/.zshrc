@@ -38,6 +38,7 @@ _extend_path "/usr/bin"
 _extend_path "/bin"
 _extend_path "/usr/sbin"
 _extend_path "/sbin"
+_extend_path "/Applications/calibre.app/Contents/MacOS"
 
 # Extend $NODE_PATH
 if [ -d ~/.npm-global ]; then
