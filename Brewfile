@@ -42,6 +42,8 @@ brew "shellcheck"
 brew "fd"
 brew "howdoi"
 brew "jq"
+brew "r"
+brew "pipx"
 
 brew "codex"
 brew "gemini-cli"

@@ -1,4 +1,13 @@
 {
+  "[dockercompose]": {
+    "editor.autoIndent": "advanced",
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
   // Language-specific formatter settings
   "[markdown]": {
     "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
@@ -30,12 +39,13 @@
     "editor.wordWrap": "on"
   },
   // General editor settings
-  "alwaysUseActiveTerminal": false,
-  "bracketedPaste": false,
   "cSpell.userWords": [
     "biostatisticians"
   ],
   "cursor.composer.shouldChimeAfterChatFinishes": true,
+  "cursor.cpp.disabledLanguages": [
+    "plaintext"
+  ],
   "cursor.cpp.enablePartialAccepts": true,
   "cursorpyright.analysis.autoImportCompletions": true,
   "cursorpyright.analysis.autoSearchPaths": true,
@@ -82,7 +92,6 @@
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.incrementalNaming": "smart",
-  "extensions.autoCheckUpdates": true,
   // Extensions settings
   "extensions.autoUpdate": true,
   // File associations
@@ -109,47 +118,14 @@
   "git.confirmSync": false,
   // Git settings
   "git.enableSmartCommit": true,
-  // Help panel settings
-  "helpPanel": {
-    "cacheIndexFiles": "None",
-    "clickCodeExamples": {
-      "Click": "Copy",
-      "Ctrl+Click": "Run",
-      "Shift+Click": "Ignore"
-    },
-    "enableHoverLinks": true,
-    "enableSyntaxHighlighting": true,
-    "previewLocalPackages": [
-      "."
-    ],
-    "rpath": ""
-  },
+  "gitlens.ai.gitkraken.model": "gemini:gemini-2.0-flash",
+  "gitlens.ai.model": "gitkraken",
   "jupyter.askForKernelRestart": false,
-  "jupyter.enableAutoMatcher": true,
   "jupyter.enableExtendedPythonKernelCompletions": true,
   // Jupyter settings
   "jupyter.interactiveWindow.creationMode": "perFile",
   "jupyter.interactiveWindow.textEditor.executeSelection": "sendToInteractiveWindow",
-  // Live Share settings
-  "liveShare": {
-    "defaults": {
-      "commandForward": false,
-      "shareBrowser": false,
-      "shareWorkspace": true
-    },
-    "timeout": 10000
-  },
-  // LSP settings
-  "lsp": {
-    "args": [],
-    "debug": false,
-    "diagnostics": true,
-    "enabled": true,
-    "lang": "",
-    "multiServer": true,
-    "promptToInstall": true,
-    "use_stdio": false
-  },
+  "latex-workshop.latex.autoBuild.run": "never",
   // Markdown settings
   "markdown.preview.breaks": true,
   "markdown.preview.fontSize": 14,
@@ -159,58 +135,13 @@
   "markdown.preview.scrollEditorWithPreview": true,
   "markdown.preview.scrollPreviewWithEditor": true,
   "markdown.preview.typographer": true,
-  // Plot settings
-  "plot": {
-    "customStyleOverwrites": "",
-    "defaults": {
-      "colorTheme": "original",
-      "fullWindowMode": false,
-      "plotPreviewLayout": "multirow"
-    },
-    "devArgs": {
-      "height": 1200,
-      "width": 800
-    },
-    "timing": {
-      "refreshInterval": 10,
-      "resizeInterval": 100
-    },
-    "useHttpgd": false
-  },
   // Project Manager settings
   "projectManager.git.baseFolders": [
     "/Users/kam/Documents/Projects/Repos",
     "/Users/kam/Documents/Projects/Forks"
   ],
-  "python.analysis.autoImportCompletions": true,
-  "python.analysis.autoSearchPaths": true,
-  "python.analysis.diagnosticMode": "workspace",
-  "python.analysis.exclude": [
-    "**/node_modules",
-    "**/__pycache__",
-    "**/*.pyc",
-    "**/.git",
-    "**/.venv",
-    "**/venv",
-    "**/.env"
-  ],
-  "python.analysis.include": [
-    "**/*.py"
-  ],
-  "python.analysis.typeCheckingMode": "basic",
   // Python settings
   "python.defaultInterpreterPath": "python3",
-  "python.formatting.provider": "black",
-  "python.linting.enabled": true,
-  "python.linting.flake8Enabled": true,
-  "python.linting.lintOnSave": true,
-  "python.linting.mypyEnabled": true,
-  "python.linting.pylintEnabled": true,
-  "python.sortImports.args": [
-    "--profile",
-    "black"
-  ],
-  "python.testing.nosetestsEnabled": false,
   "python.testing.pytestArgs": [
     "tests"
   ],
@@ -236,7 +167,6 @@
   "r.useRadian": true,
   // Telemetry settings
   "redhat.telemetry.enabled": false,
-  "removeLeadingComments": false,
   // R Markdown specific settings
   "rmarkdown": {
     "chunkBackgroundColor": "rgba(128, 128, 128, 0.1)",
@@ -316,14 +246,12 @@
     "encoding": "UTF-8",
     "focus": "editor"
   },
-  "telemetry.telemetryLevel": "off",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "line",
   // Terminal settings
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.lineHeight": 1.2,
-  "useRenvLibPath": false,
   // Workbench settings
   "workbench.colorTheme": "Default Dark Modern",
   "workbench.editor.decorations.badges": true,
@@ -334,22 +262,5 @@
   "workbench.editor.tabSizing": "shrink",
   "workbench.editor.wrapTabs": false,
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.startupEditor": "newUntitledFile",
-  // Workspace viewer settings
-  "workspaceViewer": {
-    "clearPrompt": true,
-    "removeHiddenItems": false,
-    "showObjectSize": false
-  },
-  "[dockercompose]": {
-    "editor.insertSpaces": true,
-    "editor.tabSize": 2,
-    "editor.autoIndent": "advanced",
-    "editor.defaultFormatter": "redhat.vscode-yaml"
-  },
-  "[github-actions-workflow]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
-  },
-  "gitlens.ai.model": "gitkraken",
-  "gitlens.ai.gitkraken.model": "gemini:gemini-2.0-flash"
+  "workbench.startupEditor": "newUntitledFile"
 }

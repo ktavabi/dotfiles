@@ -1,0 +1,58 @@
+// Place your key bindings in this file to override the defaults
+[
+    // toggle between the terminal and editor
+    {
+      "key": "ctrl+`",
+      "command": "workbench.action.terminal.focus"
+    },
+    {
+      "key": "ctrl+`",
+      "command": "workbench.action.focusActiveEditorGroup",
+      "when": "terminalFocus"
+    },
+      // keybindings for r/rmd/qmd
+  {
+    "key": "Cmd+Shift+m",
+    "command": "type",
+    "args": {
+      "text": " |>"
+    },
+    "when": "editorTextFocus && editorLangId =~ /r|rmd|quarto/"
+  },
+  {
+    "key": "Alt+-",
+    "command": "type",
+    "args": {
+      "text": " <- "
+    },
+    "when": "editorTextFocus && editorLangId =~ /r|rmd|quarto/"
+  },
+  // keybindings for R terminal (radian included)
+  {
+    "key": "Cmd+Shift+m",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+      "text": " |>"
+    },
+    "when": "terminalFocus"
+  },
+  {
+    "key": "Alt+-",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+      "text": " <- "
+    },
+    "when": "terminalFocus"
+  },
+  // restart R session
+  {
+    "key": "Cmd+Shift+0",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.terminal.kill",
+        "r.createRTerm"
+      ]
+    }
+  }
+]

@@ -110,3 +110,6 @@ fi
 if _exists lazygit; then
   alias lg='lazygit'
 fi
+
+# Backup Cursor editor config
+alias backup-editor-config='~/.dotfiles/scripts/backup-editor-config.zsh'

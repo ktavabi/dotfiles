@@ -34,6 +34,7 @@ _extend_path "$HOME/.yarn/bin" # Yarn
 _extend_path "$HOME/.config/yarn/global/node_modules/.bin" # Yarn global packages
 _extend_path "$HOME/.bun/bin" # Bun
 _extend_path "$HOME/.rd/bin" # Rancher Desktop
+_extend_path "/opt/homebrew/bin" # Homebrew
 _extend_path "/usr/local/bin"
 _extend_path "/usr/bin"
 _extend_path "/bin"
@@ -203,8 +204,8 @@ fi
 export PYENV_ROOT="$HOME/.pyenv"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+eval "$(pyenv init -)" # pyenv init
+eval "$(pyenv virtualenv-init -)" # pyenv virtualenv-init
 # TODO: eval "$(_PIPENV_COMPLETE=zsh_source pipenv)" # pipenv zsh tab autocomp
 
 # NVM
