@@ -100,16 +100,16 @@ fi
 # Homebrew.
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# Homebrew.
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
 # Spaceship project directory (for local development)
 SPACESHIP_PROJECT="$HOME/Projects/Repos/spaceship/spaceship-prompt"
 
-# Reset zgen on change
+# Reset zgen when these files change (explicit paths; globs can confuse zgen's
+# embedded checksum block; avoid concurrent `zgen save` from multiple shells).
 export ZGEN_RESET_ON_CHANGE=(
   "${HOME}/.zshrc"
-  "${DOTFILES}"/lib/*.zsh
+  "${DOTFILES}/lib/aliases.zsh"
+  "${DOTFILES}/lib/lscolors.zsh"
+  "${DOTFILES}/lib/smartdots.zsh"
 )
 # Load zgen
 source "${HOME}/.zgen/zgen.zsh"
@@ -202,10 +202,11 @@ fi
 
 # Python via pyenv
 export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)" # pyenv init
 eval "$(pyenv virtualenv-init -)" # pyenv virtualenv-init
+
 # TODO: eval "$(_PIPENV_COMPLETE=zsh_source pipenv)" # pipenv zsh tab autocomp
 
 # NVM
