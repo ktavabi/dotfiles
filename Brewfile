@@ -10,28 +10,44 @@ brew "zsh-completions"
 brew "nvim"
 brew "node"
 brew "coreutils"
-brew "nvm"
 brew "tree"
-brew "eza"        # better ls
-brew "zoxide"     # better cd
-brew "fzf"        # fuzzy finder
-brew "yazi"       # terminal file explorer
-brew "bat"        # better cat
-brew "tldr"       # short and simple man pages
-brew "glow"       # makrdown rendererer in terminal
-brew "trash-it"   # safe rm command
-brew "git-delta"  # better git diff
+brew "eza"
+brew "zoxide"
+brew "fzf"
 brew "wget"
-brew "yarn"
+#brew "yarn"
+brew "tldr"
 brew "mas"
 brew "gh"
 brew "terminal-notifier"
-brew "wifi-password"
-brew "speedtest"
-brew "yt-dlp"
-brew "watchman" # Watching files for Jest
+#brew "youtube-dl"
+brew "openssl@3"
+brew "readline"
+brew "sqlite3"
+brew "xz"
+brew "zlib"
+brew "tcl-tk@8"
+#brew "autoconf"
+#brew "automake"
+#brew "libtool"
+brew "texlive"
+#brew "perl"
+brew "pandoc-crossref"
+brew "pandoc"
+brew "php"
+#brew "librsvg"
+brew "pyenv"
+brew "pyenv-virtualenv"
+brew "shellcheck"
+brew "fd"
+brew "howdoi"
+brew "jq"
+brew "r"
+brew "pipx"
+brew "pkgconf"
+brew "filter-repo"
+
 brew "codex"
-brew "claude-code"
 brew "gemini-cli"
 
 # ------------------------------------------------------------------------------
@@ -50,38 +66,31 @@ cask "font-hasklug-nerd-font"
 
 # Utils
 cask "raycast"
-cask "ukrainian-typographic-keyboard"
 cask "gpg-suite"
-cask "openvpn-connect"
+#cask "openvpn-connect"
 
 # Media
-cask "transmission"
+# cask "transmission"
 cask "handbrake"
 cask "vlc"
-cask "obs"
 
 # Development
 cask "multipass"
 cask "iterm2"
-cask "visual-studio-code"
 cask "github"
 cask "ghostty"
 
-# Agents
-cask "claude"
-cask "claude-code"
-cask "codex-app"
-
 # Desktop applications
 cask "telegram"
-cask "google-chrome"
 cask "firefox"
-cask "brave-browser"
+cask "dropbox"
 cask "slack"
 cask "steam"
 cask "spotify"
-cask "notion"
 cask "discord"
+cask "tradingview"
+cask "latexit"
+cask "mactex"
 
 # Quick Look plugins
 cask "qlcolorcode" # https://github.com/anthonygelibert/QLColorCode
@@ -93,16 +102,27 @@ cask "webpquicklook" # https://github.com/dchest/webp-quicklook
 # ------------------------------------------------------------------------------
 # App Store applications
 # ------------------------------------------------------------------------------
-mas "Home Assistant", id: 1099568401
-mas "Bitwarden", id: 1352778147
 mas "Spark", id: 1176895641
-mas "Unsplash Wallpapers", id: 12848638472
+mas "Unsplash Wallpapers", id: 1284863847
 mas "NordVPN", id: 905953485
 mas "The Unarchiver",  id: 425424353
-mas "Pandan", id: 1569600264
-brew "pandoc-ref"
-brew "pandoc"
-brew "librsvg"
-brew "entr"
-brew "php"
-brew "shellcheck"
+mas "Magnet", id: 441258766
+mas "Moleskine Overlap", id: 1516950324
+mas "Journey", id: 1489704689
+mas "Timepage", id: 989178902
+mas "CotEditor", id: 1024640650
+mas "SnippetsLab", id: 1006087419
+mas "Paprika Recipe Manager 3", id: 1303222628
+mas "Python Recipes", id: 1180825853
+mas "Pomo Done – Your Time Hacker", id: 1096128050
+mas "Transmit 5", id: 1436522307
+mas "PDF Expert – Edit, Sign PDFs", id: 1055273043
+mas "Owly - Prevent Display Sleep", id: 882812218
+mas "Keynote", id: 409183694
+mas "Pages", id: 409201541
+mas "Numbers" id: 409203825
+mas "MindNode – Mind Map & Outline" id: 1289197285
+brew "wifi-password"
+brew "speedtest"
+brew "yt-dlp"
+brew "watchman" # Watching files for Jest
